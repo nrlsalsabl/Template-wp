@@ -1,0 +1,53 @@
+CF7 - Contact Us
+=================
+<div class="row">
+<div class="col-lg-6 col-12 mb-3">
+  <div class="form-group">
+	<label class="form-label">Your Name <span>*</span></label>
+	[text* myname class:form-control]
+  </div>
+</div>
+<div class="col-lg-6 col-12 mb-3">
+  <div class="form-group">
+	<label class="form-label">Your Email <span>*</span></label>
+	[email* myemail class:form-control]
+  </div>
+</div>
+<div class="col-lg-6 col-12 mb-3">
+  <div class="form-group">
+	<label class="form-label">Your Subjects <span>*</span></label>
+	[text* mysubject class:form-control]
+  </div>
+</div>
+<div class="col-lg-6 col-12 mb-3">
+  <div class="form-group">
+	<label class="form-label">Your Phone <span>*</span></label>
+	[text* myphone class:form-control]
+  </div>
+</div>
+<div class="col-12 mb-3">
+  <div class="form-group message">
+	<label class="form-label">your message <span>*</span></label>
+	[textarea mymessage class:form-control rows:10]
+  </div>
+</div>
+<div class="col-12">
+  <div class="form-group button">
+	[submit class:btn class:btn-dark "Send Message"]
+  </div>
+</div>
+</div>
+
+
+====================
+CF7 Mail
+====================
+From: [myname][myemail]
+Subject: [mysubject]
+
+Message Body:
+[myphone]
+[mymessage]
+
+-- 
+This e-mail was sent from a contact form on [_site_title] ([_site_url])

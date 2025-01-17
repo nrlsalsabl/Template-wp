@@ -1,0 +1,97 @@
+/*
+Theme Name: Fyp Media Style
+Author: Nurul Salsabila
+Version: 1.0
+Description: A WordPress theme with custom SEO functionality.
+*/
+
+
+/* Header */
+header {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.main-navigation .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.main-navigation .menu > li {
+    position: relative;
+}
+
+.main-navigation .menu > li > a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.main-navigation .menu > li:hover > ul {
+    display: block;
+}
+
+.main-navigation .menu > li ul {
+    list-style: none;
+    padding: 10px;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-navigation .menu > li ul li a {
+    color: #555;
+    padding: 5px 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.main-navigation .menu > li ul li a:hover {
+    background-color: #f8f9fa;
+}
+
+.search-form {
+    margin-left: 20px;
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form .search-field {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-form .search-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form .search-submit:hover {
+    background-color: #0056b3;
+}

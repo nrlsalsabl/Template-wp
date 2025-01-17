@@ -1,0 +1,7 @@
+.w-full input {
+	width: 100% !important;
+}
+
+.h-sm textarea {
+	min-height: 70px;
+}

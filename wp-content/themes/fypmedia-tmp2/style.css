@@ -1,0 +1,17 @@
+/*
+Theme Name: fypmedia-tmp
+Theme URI: http://example.com/fypmedia-tmp
+Author: Nama Anda
+Author URI: http://example.com
+Description: Tema sederhana dengan integrasi Tailwind CSS
+Version: 1.0.0
+License: GPL2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fypmedia-tmp
+Tags: tailwind, simple, custom
+*/
+
+/* Mengimpor Tailwind CSS (Jika menggunakan PostCSS untuk compile) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

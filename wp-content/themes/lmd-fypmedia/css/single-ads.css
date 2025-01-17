@@ -1,0 +1,41 @@
+.ad-middle {
+  margin-bottom: 15px;
+}
+.ad-middle .ad-title, .ad-middle .scroll-to-resume {
+  text-align: center;
+  background: <?php $var = lmd_get_mod('ap_single_bgcolor'); if(!empty($var)) { echo $var; } else { echo '#212121'; } ?>;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 3px;
+  margin: 0;
+}
+.ad-middle .ad-content {
+  width: 100%;
+  max-width: 380px;
+  height: 300px;
+  position: relative;
+  margin: 0px auto;
+}
+.ad-middle .ad-content-a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip: rect(auto, auto, auto, auto);
+}
+.ad-middle .ad-content-b {
+  width: 380px;
+  height: 400px;
+  position: fixed;
+  top: 0;
+  transform: translateZ(0);
+  margin: 0 auto;
+}
+.ad-middle .ad-content-c {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}

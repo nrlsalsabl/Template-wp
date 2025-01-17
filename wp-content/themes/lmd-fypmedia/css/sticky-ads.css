@@ -1,0 +1,22 @@
+.lmd-main {
+	position: relative;
+}
+.lmd-ads-sticky {
+	position: absolute;
+	top: 0;
+	width: 160px;
+	z-index: 1040;
+}
+
+.sticky-left {
+	left: 0;
+}
+
+.sticky-right {
+	right: 0;
+}
+
+.onScroll .lmd-ads-sticky {
+	position: fixed;
+	top: 60px;
+}

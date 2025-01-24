@@ -95,3 +95,16 @@ header {
 .search-form .search-submit:hover {
     background-color: #0056b3;
 }
+
+.bg-custom-black {
+    background-color: #100F16;
+  }
+
+.bg-custom-blue {
+    background-color: #6A00F4;
+  }
+
+.bg-custom-purple {
+    background-color: #D700FF;
+  }
+  

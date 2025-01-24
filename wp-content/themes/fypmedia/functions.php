@@ -71,6 +71,19 @@ function fypmedia_register_post_types()
         'rewrite' => array('slug' => 'talent'),
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     ));
+
+
+    // Team Post Type
+    register_post_type('team', array(
+        'labels' => array(
+            'name' => __('Team', 'fypmedia'),
+            'singular_name' => __('Team', 'fypmedia'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'team'),
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+    ));
 }
 add_action('init', 'fypmedia_register_post_types');
 
@@ -90,6 +103,10 @@ function fypmedia_custom_template_hierarchy($template)
         $template = locate_template('content/talent/archive-talent.php');
     } elseif (is_singular('talent')) {
         $template = locate_template('content/talent/single-talent.php');
+    } elseif (is_post_type_archive('career')) {
+        $template = locate_template('content/career/career-page.php');
+    } elseif (is_singular('talent')) {
+        $template = locate_template('content/talent/single-career.php');
     }
     return $template;
 }

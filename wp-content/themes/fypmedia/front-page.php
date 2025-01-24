@@ -59,6 +59,33 @@ include 'layouts/header.php'; // Menyertakan header.php
             ?>
         </div>
     </section>
+
+
+    <section class="latest-blogs py-8">
+        <h2 class="text-2xl font-bold mb-4">Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <?php
+            // Query for 'post' (default blog posts)
+            $team_query = new WP_Query(array(
+                'post_type' => 'team',
+                'posts_per_page' => 3,
+            ));
+            if ($team_query->have_posts()) :
+                while ($team_query->have_posts()) : $team_query->the_post();
+            ?>
+                <article>
+                    <h3 class="text-xl font-bold"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                    <div><?php the_excerpt(); ?></div>
+                </article>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            else :
+                echo '<p>No Team posts available.</p>';
+            endif;
+            ?>
+        </div>
+    </section>
 </div>
 
 <?php

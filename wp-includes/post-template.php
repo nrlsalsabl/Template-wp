@@ -619,7 +619,7 @@ function get_post_class( $css_class = '', $post = null ) {
  */
 function body_class( $css_class = '' ) {
 	// Separates class names with a single space, collates class names for body element.
-	echo 'class="' . esc_attr( implode( ' ', get_body_class( $css_class ) ) ) . '"';
+	echo 'class="bg-black"' . esc_attr( implode( ' ', get_body_class( $css_class ) ) ) . '"';
 }
 
 /**

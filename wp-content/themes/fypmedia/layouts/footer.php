@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
             <!-- Column 1 -->
             <div>
-            <a href="<?php echo home_url('/home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo_fyp.png" alt="Logo" class="h-6 md:h-5 lg:h-6 w-auto mb-3">
+            <a href="<?php echo home_url('/home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="h-6 md:h-5 lg:h-6 w-auto mb-3">
             </a>
                 <p class="text-sm text-white">FYP Media & Agency</p>
                 <p class="text-sm italic text-white mb-4">"Leading the Way in Media and Branding Excellence."</p>

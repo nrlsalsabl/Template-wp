@@ -13,11 +13,19 @@ Template Name: Career Page
 ?>
 
 <!-- Hero Section -->
+
+<?php
+include 'layouts/header.php'
+?>
+
 <section class="mb-20">
-    <div class="container mx-auto px-6 lg:px-25 mt-10 sm:mt-20 md:mt-24 lg:mt-30">
+    <div class="container mx-auto px-6 mt-10 sm:mt-20 md:mt-24 lg:mt-30">
         <div class="text-left sm:text-left md:text-left lg:text-left">
             <h1 class="text-4xl sm:text-4xl lg:text-6xl font-semibold text-white">
-                Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
+                Jadilah Bagian Dari Tim Hebat
+            </h1>
+            <h1 class="text-4xl sm:text-4xl lg:text-6xl font-semibold text-white mt-px">
+                Kami, Kerja Tapi Santai.
             </h1>
         </div>
         <div class="text-xl sm:text-xl lg:text-2xl font-normal text-white mt-7">
@@ -25,7 +33,7 @@ Template Name: Career Page
         </div>
         <div class="mt-14 space-y-4 lg:space-x-4 lg:space-y-0 flex flex-col lg:flex-row justify-center lg:justify-start">
             <a href="#"
-                class="px-10 py-3 bg-white text-black font-semibold rounded-full hover:bg-pink-900 transition-colors duration-300 flex justify-center items-center">
+                class="px-6 sm:px-8 lg:px-10 py- text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full hover:bg-pink-900 transition-colors duration-300 flex justify-center items-center">
                 Gabung Dengan Tim Kami <i class="fi fi-rr-arrow-up-right text-black font-semibold text-sm ml-3"></i>
             </a>
         </div>
@@ -43,7 +51,7 @@ Template Name: Career Page
 
     <div class="py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <?php 
+            <?php
             // Query untuk 'team' post type
             $team_query = new WP_Query(array(
                 'post_type' => 'team', // Ubah 'team' ke custom post type Anda
@@ -83,7 +91,8 @@ Template Name: Career Page
                 </div>
             <?php else : ?>
                 <p>No team members available.</p>
-            <?php endif; wp_reset_postdata(); ?>
+            <?php endif;
+            wp_reset_postdata(); ?>
         </div>
     </div>
 </section>
@@ -92,7 +101,7 @@ Template Name: Career Page
     document.addEventListener("DOMContentLoaded", function() {
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 3, // Menampilkan 3 slide per view pada ukuran layar besar
-            spaceBetween: 20,  // Jarak antar slide
+            spaceBetween: 20, // Jarak antar slide
             loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -104,7 +113,7 @@ Template Name: Career Page
             breakpoints: {
                 1024: {
                     slidesPerView: 3, // 3 slide pada desktop
-                    spaceBetween: 20, 
+                    spaceBetween: 20,
                 },
                 768: {
                     slidesPerView: 2, // 2 slide pada tablet
@@ -114,13 +123,18 @@ Template Name: Career Page
                     slidesPerView: 1, // 1 slide pada mobile
                     spaceBetween: 10,
                 },
+                390: {
+                    slidesPerView: 1, // 1 slide pada mobile
+                    spaceBetween: 10,
+                },
+                360: {
+                    slidesPerView: 1, // 1 slide pada mobile
+                    spaceBetween: 10,
+                },
             }
         });
     });
 </script>
-
-
-
 
 <!-- Divider -->
 <section>
@@ -136,8 +150,8 @@ Template Name: Career Page
 <!-- Career Opportunities Section -->
 <section>
     <div class="container mx-auto px-6 lg:px-10 py-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="sm:text-left md:text-left lg:text-left w-full lg:w-3/5 space-y-6 lg:ml-14">
-            <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight">
+        <div class="sm:text-left md:text-left lg:text-left w-3/5 lg:w-1/2 space-y-6 lg:ml-14">
+            <h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight">
                 Punya beberapa skill keren yang ingin kamu kembangkan?
                 Kami sangat ingin melihatnya, meskipun sekarang mungkin belum cocok.
             </h1>
@@ -175,3 +189,8 @@ Template Name: Career Page
         </div>
     </div>
 </section>
+
+
+<?php
+include 'layouts/footer.php'
+?>

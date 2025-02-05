@@ -62,11 +62,11 @@ Template Name: Career Page
                                         <?php the_post_thumbnail('large', ['class' => 'w-full h-96 object-cover']); ?>
                                     </a>
                                 <?php endif; ?>
-                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent p-4">
-                                    <h1 class="text-4xl sm:text-3xl font-bold text-white">
+                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent text-white p-4">
+                                    <h1 class="text-4xl sm:text-3xl font-bold">
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </h1>
-                                    <p class="text-sm text-white mt-2">
+                                    <p class="text-sm mt-2">
                                         <?php the_excerpt(); ?>
                                     </p>
                                 </div>

@@ -16,7 +16,7 @@
             <!-- Logo -->
             <div>
                 <a href="/index.html">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fyplogo.png" alt="Logo" class="h-6 md:h-8 lg:h-6 w-auto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="h-6 md:h-8 lg:h-6 w-auto">
                 </a>
             </div>
 

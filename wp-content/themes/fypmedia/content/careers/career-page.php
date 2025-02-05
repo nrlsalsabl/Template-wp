@@ -14,9 +14,9 @@ Template Name: Career Page
 
 <!-- Hero Section -->
 <section class="mb-20">
-    <div class="container mx-auto px-6 lg:px-25 mt-10 sm:mt-20 md:mt-24 lg:mt-30">
+    <div class="container lg:p-10 mx-auto mt-5 md:mt-10 lg:mt-10">
         <div class="text-left sm:text-left md:text-left lg:text-left">
-            <h1 class="text-4xl sm:text-4xl lg:text-6xl font-semibold text-white">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white">
                 Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
             </h1>
         </div>
@@ -25,7 +25,7 @@ Template Name: Career Page
         </div>
         <div class="mt-14 space-y-4 lg:space-x-4 lg:space-y-0 flex flex-col lg:flex-row justify-center lg:justify-start">
             <a href="#"
-                class="px-10 py-3 bg-white text-black font-semibold rounded-full hover:bg-pink-900 transition-colors duration-300 flex justify-center items-center">
+                class="px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full hover:bg-gray-500 transition-colors duration-300 flex justify-center items-center w-full sm:w-auto">
                 Gabung Dengan Tim Kami <i class="fi fi-rr-arrow-up-right text-black font-semibold text-sm ml-3"></i>
             </a>
         </div>
@@ -38,12 +38,12 @@ Template Name: Career Page
         <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-start ml-5 py-2">
             Our Team <i class="fi fi-rr-arrow-up-right text-white text-2xl sm:text-3xl md:text-3xl lg:text-3xl ml-3"></i>
         </h1>
-        <p class="text-white font-semibold text-start ml-6">Member of our great team</p>
+        <p class="text-gray-400 font-semibold text-start ml-6">Member of our great team</p>
     </div>
 
     <div class="py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <?php 
+            <?php
             // Query untuk 'team' post type
             $team_query = new WP_Query(array(
                 'post_type' => 'team', // Ubah 'team' ke custom post type Anda
@@ -75,52 +75,32 @@ Template Name: Career Page
                     </div>
 
                     <!-- Navigasi -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- Tombol Navigasi -->
+                    <div class="swiper-button-next flex items-center justify-center">
+                        <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    </div>
+                    <div class="swiper-button-prev flex items-center justify-center">
+                        <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    </div>
+
+                    <style>
+                        /* Mengatasi tampilan default Swiper */
+                        .swiper-button-next::after,
+                        .swiper-button-prev::after {
+                            display: none;
+                        }
+                    </style>
 
                     <!-- Scrollbar -->
                     <div class="swiper-scrollbar"></div>
                 </div>
             <?php else : ?>
                 <p>No team members available.</p>
-            <?php endif; wp_reset_postdata(); ?>
+            <?php endif;
+            wp_reset_postdata(); ?>
         </div>
     </div>
 </section>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3, // Menampilkan 3 slide per view pada ukuran layar besar
-            spaceBetween: 20,  // Jarak antar slide
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3, // 3 slide pada desktop
-                    spaceBetween: 20, 
-                },
-                768: {
-                    slidesPerView: 2, // 2 slide pada tablet
-                    spaceBetween: 15,
-                },
-                480: {
-                    slidesPerView: 1, // 1 slide pada mobile
-                    spaceBetween: 10,
-                },
-            }
-        });
-    });
-</script>
-
-
-
 
 <!-- Divider -->
 <section>
@@ -136,7 +116,7 @@ Template Name: Career Page
 <!-- Career Opportunities Section -->
 <section>
     <div class="container mx-auto px-6 lg:px-10 py-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="sm:text-left md:text-left lg:text-left w-full lg:w-3/5 space-y-6 lg:ml-14">
+        <div class="sm:text-left md:text-left lg:text-left w-full lg:w-3/5 space-y-6">
             <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight">
                 Punya beberapa skill keren yang ingin kamu kembangkan?
                 Kami sangat ingin melihatnya, meskipun sekarang mungkin belum cocok.
@@ -164,12 +144,12 @@ Template Name: Career Page
 <!-- Contact Section -->
 <section>
     <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-left lg:text-left py-10 mt-2 px-6 lg:px-0">
-            <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-light text-left lg:text-left ml-5">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-left py-10 mt-2 px-6 lg:px-0 gap-4">
+            <h1 class="text-white font-semibold text-5xl md:text-4xl lg:text-5xl w-full lg:w-auto text-left lg:text-left ml-0 lg:ml-20 max-w-sm lg:max-w-xl">
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="mt-5 lg:mt-0 hover:bg-purple-500 bg-purple-700 text-white text-sm md:text-base px-5 py-2 rounded-full transition duration-200 lg:mr-16 mx-auto lg:mx-0">
+                class="hover:bg-purple-500 bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition duration-200 lg:mr-16 w-full lg:w-auto text-center">
                 Get in touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>

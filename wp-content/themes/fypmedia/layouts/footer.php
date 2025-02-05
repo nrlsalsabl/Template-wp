@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
             <!-- Column 1 -->
             <div>
-            <a href="<?php echo home_url('/home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/fyplogo.png" alt="Logo" class="h-6 md:h-5 lg:h-6 w-auto mb-3">
+            <a href="<?php echo home_url('/home'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="h-6 md:h-5 lg:h-6 w-auto mb-3">
             </a>
                 <p class="text-sm text-white">FYP Media & Agency</p>
                 <p class="text-sm italic text-white mb-4">"Leading the Way in Media and Branding Excellence."</p>
@@ -80,4 +80,90 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a329084b4e.js" crossorigin="anonymous"></script>
+    <script>
+            // Script untuk menu mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOverlay = document.getElementById('menu-overlay');
+
+    // Fungsi untuk membuka menu
+    const openMenu = () => {
+        mobileMenu.classList.remove('-translate-x-full');
+        menuOverlay.classList.remove('hidden');
+    };
+
+    // Fungsi untuk menutup menu
+    const closeMenu = () => {
+        mobileMenu.classList.add('-translate-x-full');
+        menuOverlay.classList.add('hidden');
+    };
+
+    // Tambahkan event listener
+    mobileMenuButton.addEventListener('click', openMenu);
+    closeMenuButton.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    </script>
+    <script>
+        // Script untuk card career-page.php
+    document.addEventListener('DOMContentLoaded', () => {
+        // Swiper card
+        const cardSwiper = new Swiper('.swiper-scrollbar', {
+            loop: true, // Mengaktifkan loop
+            slidesPerView: 3, // Menampilkan 3 card sekaligus
+            spaceBetween: 20, // Jarak antar card
+            navigation: {
+                nextEl: '.swiper-button-next', // Tombol untuk navigasi ke slide berikutnya
+                prevEl: '.swiper-button-prev', // Tombol untuk navigasi ke slide sebelumnya
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                390: {
+                    slidesPerView: 1,
+                },
+                360: {
+                    slidesPerView: 1,
+                },
+            },
+        });
+    });
+</script>
+<script>
+    // Script untuk autoswiper front-page.php
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inisialisasi Swiper setelah DOM selesai dimuat
+            const autoplayswiper = new Swiper('.autoplay-swiper', {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                slidesPerView: 2,
+                spaceBetween: 2,
+                centeredSlides: false,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 7,
+                        spaceBetween: 2
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 4
+                    },
+                    360: {
+                        slidesPerView: 4,
+                        spaceBetween: 4
+                    },
+                },
+            });
+        });
+    </script>
     </body>

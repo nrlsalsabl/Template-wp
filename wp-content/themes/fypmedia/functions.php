@@ -92,17 +92,6 @@ function fypmedia_register_post_types()
         'rewrite' => array('slug' => 'team'),
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
     ));
-
-    register_post_type('team', array(
-        'labels' => array(
-            'name' => __('Team', 'fypmedia'),
-            'singular_name' => __('Team', 'fypmedia'),
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'team'),
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-    ));
 }
 add_action('init', 'fypmedia_register_post_types');
 

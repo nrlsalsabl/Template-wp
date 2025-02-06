@@ -34,6 +34,8 @@ function fypmedia_enqueue_assets()
     
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), null, true );
 
+    wp_enqueue_script( 'scripttailwind', 'https://unpkg.com/@tailwindcss/browser@4', array(), null, true );
+
     // Load Theme's Main Stylesheet
     wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
 }
@@ -82,17 +84,6 @@ function fypmedia_register_post_types()
 
 
     // Team Post Type
-    register_post_type('team', array(
-        'labels' => array(
-            'name' => __('Team', 'fypmedia'),
-            'singular_name' => __('Team', 'fypmedia'),
-        ),
-        'public' => true,
-        'has_archive' => true,
-        'rewrite' => array('slug' => 'team'),
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-    ));
-
     register_post_type('team', array(
         'labels' => array(
             'name' => __('Team', 'fypmedia'),

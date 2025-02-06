@@ -13,19 +13,11 @@ Template Name: Career Page
 ?>
 
 <!-- Hero Section -->
-
-<?php
-include 'layouts/header.php'
-?>
-
 <section class="mb-20">
-    <div class="container mx-auto px-6 mt-10 sm:mt-20 md:mt-24 lg:mt-30">
+    <div class="container lg:p-10 mx-auto mt-5 md:mt-10 lg:mt-10">
         <div class="text-left sm:text-left md:text-left lg:text-left">
-            <h1 class="text-4xl sm:text-4xl lg:text-6xl font-semibold text-white">
-                Jadilah Bagian Dari Tim Hebat
-            </h1>
-            <h1 class="text-4xl sm:text-4xl lg:text-6xl font-semibold text-white mt-px">
-                Kami, Kerja Tapi Santai.
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white">
+                Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
             </h1>
         </div>
         <div class="text-xl sm:text-xl lg:text-2xl font-normal text-white mt-7">
@@ -33,7 +25,7 @@ include 'layouts/header.php'
         </div>
         <div class="mt-14 space-y-4 lg:space-x-4 lg:space-y-0 flex flex-col lg:flex-row justify-center lg:justify-start">
             <a href="#"
-                class="px-6 sm:px-8 lg:px-10 py- text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full hover:bg-pink-900 transition-colors duration-300 flex justify-center items-center">
+                class="px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full hover:bg-gray-500 transition-colors duration-300 flex justify-center items-center w-full sm:w-auto">
                 Gabung Dengan Tim Kami <i class="fi fi-rr-arrow-up-right text-black font-semibold text-sm ml-3"></i>
             </a>
         </div>
@@ -46,7 +38,7 @@ include 'layouts/header.php'
         <h1 class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold text-start ml-5 py-2">
             Our Team <i class="fi fi-rr-arrow-up-right text-white text-2xl sm:text-3xl md:text-3xl lg:text-3xl ml-3"></i>
         </h1>
-        <p class="text-white font-semibold text-start ml-6">Member of our great team</p>
+        <p class="text-gray-400 font-semibold text-start ml-6">Member of our great team</p>
     </div>
 
     <div class="py-4">
@@ -70,11 +62,11 @@ include 'layouts/header.php'
                                         <?php the_post_thumbnail('large', ['class' => 'w-full h-96 object-cover']); ?>
                                     </a>
                                 <?php endif; ?>
-                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent p-4">
-                                    <h1 class="text-4xl sm:text-3xl font-bold text-white">
+                                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent text-white p-4">
+                                    <h1 class="text-4xl sm:text-3xl font-bold">
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </h1>
-                                    <p class="text-sm text-white mt-2">
+                                    <p class="text-sm mt-2">
                                         <?php the_excerpt(); ?>
                                     </p>
                                 </div>
@@ -83,8 +75,21 @@ include 'layouts/header.php'
                     </div>
 
                     <!-- Navigasi -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- Tombol Navigasi -->
+                    <div class="swiper-button-next flex items-center justify-center">
+                        <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    </div>
+                    <div class="swiper-button-prev flex items-center justify-center">
+                        <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    </div>
+
+                    <style>
+                        /* Mengatasi tampilan default Swiper */
+                        .swiper-button-next::after,
+                        .swiper-button-prev::after {
+                            display: none;
+                        }
+                    </style>
 
                     <!-- Scrollbar -->
                     <div class="swiper-scrollbar"></div>
@@ -96,45 +101,6 @@ include 'layouts/header.php'
         </div>
     </div>
 </section>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3, // Menampilkan 3 slide per view pada ukuran layar besar
-            spaceBetween: 20, // Jarak antar slide
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            scrollbar: {
-                el: '.swiper-scrollbar',
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3, // 3 slide pada desktop
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2, // 2 slide pada tablet
-                    spaceBetween: 15,
-                },
-                480: {
-                    slidesPerView: 1, // 1 slide pada mobile
-                    spaceBetween: 10,
-                },
-                390: {
-                    slidesPerView: 1, // 1 slide pada mobile
-                    spaceBetween: 10,
-                },
-                360: {
-                    slidesPerView: 1, // 1 slide pada mobile
-                    spaceBetween: 10,
-                },
-            }
-        });
-    });
-</script>
 
 <!-- Divider -->
 <section>
@@ -150,8 +116,8 @@ include 'layouts/header.php'
 <!-- Career Opportunities Section -->
 <section>
     <div class="container mx-auto px-6 lg:px-10 py-10 flex flex-col lg:flex-row items-center justify-between">
-        <div class="sm:text-left md:text-left lg:text-left w-3/5 lg:w-1/2 space-y-6 lg:ml-14">
-            <h1 class="text-xl sm:text-3xl lg:text-4xl font-semibold text-white leading-tight">
+        <div class="sm:text-left md:text-left lg:text-left w-full lg:w-3/5 space-y-6">
+            <h1 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white leading-tight">
                 Punya beberapa skill keren yang ingin kamu kembangkan?
                 Kami sangat ingin melihatnya, meskipun sekarang mungkin belum cocok.
             </h1>
@@ -178,19 +144,14 @@ include 'layouts/header.php'
 <!-- Contact Section -->
 <section>
     <div class="container mx-auto">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-left lg:text-left py-10 mt-2 px-6 lg:px-0">
-            <h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-light text-left lg:text-left ml-5">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-left py-10 mt-2 px-6 lg:px-0 gap-4">
+            <h1 class="text-white font-semibold text-5xl md:text-4xl lg:text-5xl w-full lg:w-auto text-left lg:text-left ml-0 lg:ml-20 max-w-sm lg:max-w-xl">
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="mt-5 lg:mt-0 hover:bg-purple-500 bg-purple-700 text-white text-sm md:text-base px-5 py-2 rounded-full transition duration-200 lg:mr-16 mx-auto lg:mx-0">
+                class="hover:bg-purple-500 bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition duration-200 lg:mr-16 w-full lg:w-auto text-center">
                 Get in touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>
     </div>
 </section>
-
-
-<?php
-include 'layouts/footer.php'
-?>

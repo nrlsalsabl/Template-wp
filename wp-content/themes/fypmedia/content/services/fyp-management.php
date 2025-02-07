@@ -1,6 +1,6 @@
 <div class="mx-auto w-full">
     <div class="text-center mt-20">
-        <h2 class="text-white text-8xl font-semibold">Buat Kebutuhan KOL</h2>
+        <h2 class="text-white text-8xl font-semibold">Buat Kebutuhan KOL    </h2>
         <h2 class="text-purple-500 text-8xl font-semibold">Kamu Lebih Mudah</h2>
         <p class="text-white mt-6 w-6/12 mx-auto">Mau brand kamu dikenal lebih luas dan efektif? Saatnya bekerjasama dengan KOL FYP Management. Kami menyediakan fasilitas untuk membuat, mengecek, dan membandingkan rate card KOL dengan mudah.</p>
         <button class="bg-purple-600 mt-7 mb-20 text-white font-semibold px-16 py-3 rounded-full hover:bg-blue-700 transition">

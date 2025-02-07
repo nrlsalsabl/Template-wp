@@ -16,7 +16,7 @@ Template Name: Career Page
 <section class="mb-20">
     <div class="container lg:p-10 mx-auto mt-5 md:mt-10 lg:mt-10">
         <div class="text-left sm:text-left md:text-left lg:text-left">
-            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white">
+            <h1 class="text-3xl md:text-4xl lg:text-7xl font-semibold text-white leading-snug">
                 Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
             </h1>
         </div>

@@ -398,7 +398,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="hover:bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition duration-200 lg:mr-16 w-full lg:w-auto text-center">
+                class="hover:bg-purple-500 bg-custom-purple mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition duration-200 lg:mr-16 w-full lg:w-auto text-center">
                 Get in touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>

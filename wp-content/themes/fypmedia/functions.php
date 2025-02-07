@@ -205,3 +205,13 @@ class WP_Tailwind_Navwalker extends Walker_Nav_Menu
         $output .= $item_output;
     }
 }
+
+function enqueue_custom_scripts()
+{
+    wp_enqueue_style('custom-infinite-scroll', get_template_directory_uri() . '/style.css');
+
+    
+    wp_enqueue_script('custom-infinite-scroll', get_template_directory_uri() . '/assets/js/infinite-scroll.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+

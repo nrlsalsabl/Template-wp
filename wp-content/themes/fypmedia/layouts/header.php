@@ -12,11 +12,11 @@
     <!-- Header Section -->
     <nav id="navbar" class="bg-black text-white sticky z-50 top-0 border-b-2 border-gray-800 transition-all duration-300 ease-in-out">
         <div class="container mx-auto px-6 flex justify-between items-center py-6">
-            
+
             <!-- Logo -->
             <div>
                 <a href="/index.html">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo" class="h-6 md:h-8 lg:h-6 w-auto">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fypmedia.png" alt="Logo" class="h-6 md:h-8 lg:h-6 w-auto">
                 </a>
             </div>
 
@@ -33,24 +33,28 @@
                         <i class="fi fi-rr-angle-down ml-2 text-sm"></i>
                     </button>
 
-                    <div id="dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100">
+                    <div id="dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 z-10">
                         <a href="/web-development.php" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
-                            Web Development
+                            FYP Media
                         </a>
-                        <a href="/seo-services.php" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
-                            SEO Services
+                        <a href="http://localhost/wordpress/fyp-management/" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
+                            FYP Managemenet
                         </a>
-                        <a href="/marketing.php" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
-                            Digital Marketing
+                        <a href="http://localhost/wordpress/fyp-mandala/" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
+                            FYP Mandala
                         </a>
+
+
+
                     </div>
                 </div>
 
+
                 <!-- Additional Menu Items -->
-                <a href="/talent.php" class="text-slate-300 text-md font-normal hover:text-red-700 border-b-2 border-transparent transition-all duration-300">
+                <a href="<?php echo home_url('/talent'); ?>" class="text-slate-300 text-md font-normal hover:text-red-700 border-b-2 border-transparent transition-all duration-300">
                     Talent
                 </a>
-                <a href="/news.php" class="text-slate-300 text-md font-normal hover:text-red-700 border-b-2 border-transparent transition-all duration-300">
+                <a href="<?php echo home_url('/news'); ?>" class="text-slate-300 text-md font-normal hover:text-red-700 border-b-2 border-transparent transition-all duration-300">
                     News
                 </a>
                 <a href="<?php echo home_url('/career'); ?>" class="text-slate-300 text-md font-normal hover:text-red-700 border-b-2 border-transparent transition-all duration-300">
@@ -110,13 +114,60 @@
     </nav>
 
 </body>
+
 </html>
 
 <?php
-        // wp_nav_menu(array(
-        //     'theme_location' => 'main-menu',
-        //     'container' => '',
-        //     'menu_class' => 'flex space-x-4',
-        //     'walker' => new WP_Tailwind_Navwalker(),  // Optional, jika ingin menggunakan class khusus untuk dropdown
-        // ));
-        ?>
+// wp_nav_menu(array(
+//     'theme_location' => 'main-menu',
+//     'container' => '',
+//     'menu_class' => 'flex space-x-4',
+//     'walker' => new WP_Tailwind_Navwalker(),  // Optional, jika ingin menggunakan class khusus untuk dropdown
+// ));
+?>
+
+<style>
+    /* Optional: for better control of dropdown visibility */
+    .group:hover #dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    #dropdown-menu {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    }
+
+    #dropdown-menu a {
+        padding: 12px;
+        text-align: left;
+        display: block;
+        font-size: 14px;
+        color: #333;
+        background-color: white;
+        border-radius: 4px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    #dropdown-menu a:hover {
+        background-color: #e11d48;
+        /* Adjust to match theme */
+        color: white;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownButton = document.querySelector('#navbar .group button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+
+        dropdownButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            dropdownMenu.classList.toggle('opacity-0');
+            dropdownMenu.classList.toggle('invisible');
+            dropdownMenu.classList.toggle('scale-95');
+        });
+    });
+</script>

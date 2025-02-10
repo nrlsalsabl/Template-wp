@@ -31,7 +31,7 @@ Template Name: fyp-media
             <div class="col-start-2 row-start-2 row-span-1 place-self-start -mt-32">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto3.png" alt="Gambar 2" class="w-full h-40 rounded-lg shadow-lg">
             </div>
-            <div class="col-start-2 row-start-1 place-self-center">
+            <div class="col-start-2 row-start-1 place-self-center  hidden sm:block">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/foto4.png" alt="Gambar 3" class="w-full h-40 rounded-lg shadow-lg">
             </div>
             <div class="col-start-2 row-start-2 place-self-end -mt-32">

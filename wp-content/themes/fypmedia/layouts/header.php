@@ -34,7 +34,7 @@
                     </button>
 
                     <div id="dropdown-menu" class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform scale-95 group-hover:scale-100 z-10">
-                        <a href="/web-development.php" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
+                        <a href="http://localhost/wordpress/fyp-media/" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">
                             FYP Media
                         </a>
                         <a href="http://localhost/wordpress/fyp-management/" class="block px-4 py-2 text-gray-700 hover:bg-rose-500 hover:text-white transition-colors duration-200">

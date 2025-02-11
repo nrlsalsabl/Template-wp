@@ -16,7 +16,7 @@ Template Name: Career Page
 <section class="mb-20">
     <div class="container lg:p-10 mx-auto mt-5 md:mt-10 lg:mt-10">
         <div class="text-left sm:text-left md:text-left lg:text-left">
-            <h1 class="text-3xl md:text-4xl lg:text-7xl font-semibold text-white leading-snug">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white">
                 Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
             </h1>
         </div>
@@ -149,8 +149,8 @@ Template Name: Career Page
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="hover:bg-purple-500 bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition duration-200 lg:mr-16 w-full lg:w-auto text-center">
-                Get in touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
+                class="hover:bg-purple-500 bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
+                Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>
     </div>

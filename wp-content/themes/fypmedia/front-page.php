@@ -333,7 +333,7 @@ include 'layouts/header.php'; // Menyertakan header.php
             </h1>
             <!-- Tombol More News untuk layar besar -->
             <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 hover:bg-pink-700 transition duration-200 text-center hidden md:inline-block">
-                More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
+                More Blog<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
 
@@ -342,7 +342,7 @@ include 'layouts/header.php'; // Menyertakan header.php
             <?php
             // Query for 'post' (default blog posts)
             $blog_query = new WP_Query(array(
-                'post_type' => 'post',
+                'post_type' => 'blog',
                 'posts_per_page' => 3,
             ));
             if ($blog_query->have_posts()) :

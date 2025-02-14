@@ -16,7 +16,7 @@ Template Name: Career Page
 <section class="mb-20">
     <div class="container lg:p-10 mx-auto mt-5 md:mt-10 lg:mt-10">
         <div class="text-left sm:text-left md:text-left lg:text-left">
-            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-semibold text-white" style="line-height: 1.25;">
                 Jadilah Bagian Dari Tim Hebat Kami, Kerja Tapi Santai.
             </h1>
         </div>
@@ -25,7 +25,7 @@ Template Name: Career Page
         </div>
         <div class="mt-14 space-y-4 lg:space-x-4 lg:space-y-0 flex flex-col lg:flex-row justify-center lg:justify-start">
             <a href="#"
-                class="px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full hover:bg-gray-500 transition-colors duration-300 flex justify-center items-center w-full sm:w-auto">
+                class="px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 lg:py-3 text-sm sm:text-base lg:text-lg bg-white text-black font-semibold rounded-full transition-transform duration-300 transform hover:scale-105 flex justify-center items-center w-full sm:w-auto">
                 Gabung Dengan Tim Kami <i class="fi fi-rr-arrow-up-right text-black font-semibold text-sm ml-3"></i>
             </a>
         </div>
@@ -77,10 +77,10 @@ Template Name: Career Page
                     <!-- Navigasi -->
                     <!-- Tombol Navigasi -->
                     <div class="swiper-button-next flex items-center justify-center">
-                        <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                        <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black text-4xl transition-transform duration-300 transform hover:scale-105 w-8 h-8 flex items-center justify-center"></i>
                     </div>
                     <div class="swiper-button-prev flex items-center justify-center">
-                        <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black hover:bg-gray-300 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                        <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black text-4xl transition-transform duration-300 transform hover:scale-105 w-8 h-8 flex items-center justify-center"></i>
                     </div>
 
                     <style>
@@ -149,7 +149,7 @@ Template Name: Career Page
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="hover:bg-purple-500 bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
+                class="bg-custom-purple text-white text-sm md:text-base px-5 py-2 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
                 Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>

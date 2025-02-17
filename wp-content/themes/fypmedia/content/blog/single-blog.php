@@ -9,8 +9,6 @@ get_template_part('layouts/header'); // Include header
         <div class="mb-6 text-left max-w-4xl px-2">
             <h3 class="text-red-600 text-md font-semibold">FYP Blog</h3>
 
-            <h1 class="text-4xl font-bold text-white"><?php single_post_title(); ?></h1>
-
             <h1 class="text-3xl lg:text-4xl font-bold text-white" style="line-height: 1.25;"><?php single_post_title(); ?></h1>
 
         </div>
@@ -20,12 +18,6 @@ get_template_part('layouts/header'); // Include header
             <!-- Bagian Kiri (Artikel Utama) -->
             <main class="lg:w-3/5 p-3 rounded-lg text-white">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-                        <article>
-                            <p class="text-sm text-gray-400 mb-2">
-                                Writer: <span class="text-red-600 font-semibold"><?php the_author(); ?></span> -
-                                <?php the_date(); ?>
-                            </p>
 
                         <article class="mb-6">
                             <!-- Header dengan Writer dan Media Sosial -->

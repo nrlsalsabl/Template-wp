@@ -7,7 +7,7 @@ get_template_part('layouts/header'); // Include header
         <!-- Judul di Luar Grid -->
         <div class="mb-6 text-left px-5">
             <h3 class="text-red-600 text-md font-semibold">FYP Blog</h3>
-            <h1 class="text-4xl font-bold text-red-400"><?php single_post_title(); ?></h1>
+            <h1 class="text-4xl font-bold text-white"><?php single_post_title(); ?></h1>
 
         </div>
 
@@ -18,7 +18,7 @@ get_template_part('layouts/header'); // Include header
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <article>
                             <p class="text-sm text-gray-400 mb-2">
-                                Writer: <span class="text-red-300 font-semibold"><?php the_author(); ?></span> -
+                                Writer: <span class="text-red-600 font-semibold"><?php the_author(); ?></span> -
                                 <?php the_date(); ?>
                             </p>
                             <div class="mb-4">

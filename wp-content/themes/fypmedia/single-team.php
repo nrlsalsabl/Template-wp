@@ -122,6 +122,9 @@ get_template_part('layouts/header'); // Menyertakan header.php
         </div>
 </section>
 
+<!-- Divider -->
+<div class="w-full h-px bg-gray-500 mt-4 mx-auto"></div>
+
 <!-- Contact Section -->
 <section>
     <div class="container mx-auto">
@@ -135,6 +138,7 @@ get_template_part('layouts/header'); // Menyertakan header.php
             </a>
         </div>
     </div>
+
 </section>
 
 <?php

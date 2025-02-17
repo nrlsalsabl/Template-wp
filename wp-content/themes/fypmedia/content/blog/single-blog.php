@@ -1,13 +1,17 @@
 <?php
 get_template_part('layouts/header'); // Include header
 ?>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
 
 <section>
     <div class="container mx-auto p-4">
         <!-- Judul di Luar Grid -->
-        <div class="mb-6 text-left px-5">
+        <div class="mb-6 text-left max-w-4xl px-2">
             <h3 class="text-red-600 text-md font-semibold">FYP Blog</h3>
+
             <h1 class="text-4xl font-bold text-white"><?php single_post_title(); ?></h1>
+
+            <h1 class="text-3xl lg:text-4xl font-bold text-white" style="line-height: 1.25;"><?php single_post_title(); ?></h1>
 
         </div>
 
@@ -16,11 +20,29 @@ get_template_part('layouts/header'); // Include header
             <!-- Bagian Kiri (Artikel Utama) -->
             <main class="lg:w-3/5 p-3 rounded-lg text-white">
                 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
                         <article>
                             <p class="text-sm text-gray-400 mb-2">
                                 Writer: <span class="text-red-600 font-semibold"><?php the_author(); ?></span> -
                                 <?php the_date(); ?>
                             </p>
+
+                        <article class="mb-6">
+                            <!-- Header dengan Writer dan Media Sosial -->
+                            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-2">
+                                <p class="text-sm text-gray-400 mb-2 md:mb-0">
+                                    Writer: <span class="text-red-600 font-semibold"><?php the_author(); ?></span> - <?php the_date(); ?>
+                                </p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-white hover:text-red-400 lg:text-xl"><i class="fi fi-brands-instagram"></i></a>
+                                    <a href="#" class="text-white hover:text-green-400 lg:text-xl"><i class="fi fi-brands-whatsapp"></i></a>
+                                    <a href="#" class="text-white hover:text-blue-400 lg:text-xl"><i class="fi fi-brands-linkedin"></i></a>
+                                    <a href="#" class="text-white hover:text-gray-700 lg:text-xl"><i class="fi fi-brands-twitter-alt"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Gambar dan Konten -->
+
                             <div class="mb-4">
                                 <?php the_post_thumbnail('medium', ['class' => 'w-full h-auto rounded-lg']); ?>
                             </div>
@@ -36,7 +58,10 @@ get_template_part('layouts/header'); // Include header
 
             <!-- Sidebar (Artikel Terbaru) -->
             <aside class="hidden md:block lg:w-1/2 p-3">
-                <h2 class="text-xl font-bold text-white mb-4">Artikel Terbaru</h2>
+                <h2 class="text-xl font-bold text-white mb-4">
+                    <span class="inline-block w-1 h-4 lg:w-1 lg:h-4 bg-red-500 rounded-full mr-2"></span>
+                    Artikel Terbaru
+                </h2>
                 <?php
                 $recent_posts = wp_get_recent_posts(['numberposts' => 4]);
                 foreach ($recent_posts as $post) : ?>
@@ -98,7 +123,7 @@ get_template_part('layouts/header'); // Include header
                             </h2>
 
                             <p class="text-white text-sm mb-3">
-                                <?php echo wp_trim_words(get_the_excerpt(), 20, '...'); ?>
+                                <?php echo wp_trim_words(get_the_excerpt(), 5); ?>
                             </p>
 
                             <p class="text-red-500 text-xs">By <?php echo get_the_author(); ?> - <?php echo get_the_date('j F Y'); ?></p>

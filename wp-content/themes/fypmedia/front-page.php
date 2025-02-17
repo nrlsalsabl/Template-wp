@@ -16,11 +16,11 @@ include 'layouts/header.php'; // Menyertakan header.php
             </div>
             <div class="mt-14 space-y-4 lg:space-x-4 lg:space-y-0 flex flex-col lg:flex-row justify-center lg:justify-start">
                 <a href="#"
-                    class="px-10 py-2 bg-white text-black hover:bg-gray-500 rounded-full transition-colors duration-300 flex justify-center items-center">
+                    class="px-10 py-2 bg-white text-black rounded-full transition-transform transform hover:scale-105 flex justify-center items-center">
                     Get in Touch <i class="fi fi-rr-arrow-up-right text-black text-sm ml-3"></i>
                 </a>
                 <a href="#"
-                    class="px-10 py-2 bg-transparent border text-white hover:bg-gray-500 rounded-full transition-colors duration-300 flex justify-center items-center">
+                    class="px-10 py-2 bg-transparent border text-white rounded-full transition-transform transform hover:scale-105 flex justify-center items-center">
                     Read News here <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                 </a>
             </div>
@@ -43,9 +43,9 @@ include 'layouts/header.php'; // Menyertakan header.php
                         $image_path = get_template_directory_uri() . "/assets/images/{$i}.png";
                     ?>
                         <div class="swiper-slide flex">
-                            <img src="<?php echo esc_url($image_path); ?>" 
+                            <img src="<?php echo esc_url($image_path); ?>"
                                 alt="Image <?php echo $i; ?>"
-                                class="h-10 sm:h-12 lg:h-16 object-contain hover:scale-110 transition-transform duration-300"  />
+                                class="h-10 sm:h-12 lg:h-16 object-contain hover:scale-110 transition-transform duration-300" />
                         </div>
                     <?php endfor; ?>
                 </div>
@@ -53,7 +53,7 @@ include 'layouts/header.php'; // Menyertakan header.php
         </div>
     </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             // Inisialisasi Swiper setelah DOM selesai dimuat
             const autoplayswiper = new Swiper('.autoplay-swiper', {
                 loop: true,
@@ -111,7 +111,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                 Siap bantu bikin konten keren dan naikin pamor brand kamu di platform ini!
             </p>
             <a href="#"
-                class="hover:bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-5 text-white text-sm md:text-base px-8 lg:px-8 py-3 rounded-full transition duration-200 w-full lg:w-auto text-center">
+                class="hover:bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-5 text-white text-sm md:text-base px-8 lg:px-8 py-3 rounded-full transition-transform transform hover:scale-105 w-full lg:w-auto text-center">
                 Contact Us Now <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
 
@@ -131,7 +131,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                 News
             </h1>
             <!-- Tombol More News untuk layar besar -->
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 hover:bg-pink-700 transition duration-200 text-center hidden md:inline-block">
+            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform transform hover:scale-105 text-center hidden md:inline-block">
                 More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
@@ -148,7 +148,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                     $post_author = get_the_author();
                     $post_date = get_the_date('j F Y');
             ?>
-                    <div class="flex flex-col bg-transparent rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="flex flex-col bg-transparent rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
                         <!-- Gambar Post -->
                         <a href="<?php the_permalink(); ?>">
                             <?php if (has_post_thumbnail()) : ?>
@@ -177,7 +177,7 @@ include 'layouts/header.php'; // Menyertakan header.php
         <!-- Tombol More News untuk layar kecil -->
         <div class="flex justify-center mt-6 order-3 lg:hidden">
             <a href="#"
-                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full hover:bg-red-500 transition duration-200 text-center">
+                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform transform hover:scale-105 text-center">
                 More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
@@ -211,7 +211,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                             </p>
                             <div class="flex justify-center mt-4">
                                 <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full hover:bg-purple-600 shadow-lg transition-colors duration-300 whitespace-nowrap">
+                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
                                     Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                                 </a>
                             </div>
@@ -226,7 +226,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                             </p>
                             <div class="flex justify-center mt-4">
                                 <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full hover:bg-purple-600 shadow-lg transition-colors duration-300 whitespace-nowrap">
+                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
                                     Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                                 </a>
                             </div>
@@ -241,7 +241,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                             </p>
                             <div class="flex justify-center mt-4">
                                 <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full hover:bg-purple-600 shadow-lg transition-colors duration-300 whitespace-nowrap">
+                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
                                     Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                                 </a>
                             </div>
@@ -256,7 +256,7 @@ include 'layouts/header.php'; // Menyertakan header.php
                             </p>
                             <div class="flex justify-center mt-4">
                                 <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full hover:bg-purple-600 shadow-lg transition-colors duration-300 whitespace-nowrap">
+                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform transform hover:scale-105 whitespace-nowrap">
                                     Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                                 </a>
                             </div>
@@ -266,10 +266,10 @@ include 'layouts/header.php'; // Menyertakan header.php
 
                 <!-- Tombol Navigasi -->
                 <div class="swiper-button-next flex items-center justify-center">
-                    <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black hover:bg-gray-500 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    <i class="fi fi-rr-angle-small-right bg-white rounded-full text-black transition-transform duration-300 transform hover:scale-105 text-4xl w-8 h-8 flex items-center justify-center"></i>
                 </div>
                 <div class="swiper-button-prev flex items-center justify-center">
-                    <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black hover:bg-gray-500 text-4xl transition duration-300 w-8 h-8 flex items-center justify-center"></i>
+                    <i class="fi fi-rr-angle-small-left bg-white rounded-full text-black transition-transform duration-300 transform hover:scale-105 text-4xl w-8 h-8 flex items-center justify-center"></i>
                 </div>
 
 
@@ -332,29 +332,29 @@ include 'layouts/header.php'; // Menyertakan header.php
                 Latest Blog
             </h1>
             <!-- Tombol More News untuk layar besar -->
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 hover:bg-pink-700 transition duration-200 text-center hidden md:inline-block">
+            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform transform hover:scale-105 text-center hidden md:inline-block">
                 More Blog<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
 
         <!-- Blog Cards Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-center max-w-6xl mx-auto px-4 py-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto px-4 py-5">
             <?php
             // Query for 'post' (default blog posts)
-            $blog_query = new WP_Query(array(
-                'post_type' => 'blog',
+            $post_query = new WP_Query(array(
+                'post_type' => 'post',
                 'posts_per_page' => 3,
             ));
-            if ($blog_query->have_posts()) :
-                while ($blog_query->have_posts()) : $blog_query->the_post();
+            if ($post_query->have_posts()) :
+                while ($post_query->have_posts()) : $post_query->the_post();
             ?>
-                    <div class="flex flex-col bg-transparent rounded-lg shadow-lg overflow-hidden">
-                        <a href="<?php the_permalink(); ?>">
+                    <div class="flex flex-col bg-transparent rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105">
+                        <a href="<?php the_permalink(); ?>" class="block">
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium', ['class' => 'w-full h-48 object-cover rounded-lg']); ?>
+                                <?php the_post_thumbnail('medium', ['class' => 'w-full h-48 object-cover rounded-t-lg']); ?>
                             <?php endif; ?>
                         </a>
-                        <div class="flex-grow p-2">
+                        <div class="flex-grow p-5 rounded-b-lg">
                             <h3 class="text-xs font-semibold text-blue-300 uppercase tracking-wide mb-1">FYP Media Blog</h3>
 
                             <h2 class="text-white text-lg font-bold hover:text-red-500 transition-colors mb-3">
@@ -372,14 +372,14 @@ include 'layouts/header.php'; // Menyertakan header.php
                 endwhile;
                 wp_reset_postdata();
             else :
-                echo '<p>No blog posts available.</p>';
+                echo '<p class="text-white">No blog posts available.</p>';
             endif;
             ?>
         </div>
 
         <!-- Tombol More News untuk layar kecil -->
         <div class="flex justify-center mt-6 lg:hidden">
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full hover:bg-pink-700 transition duration-200 text-center">
+            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform transform hover:scale-105 text-center">
                 More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>

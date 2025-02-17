@@ -105,16 +105,9 @@ Template Name: fyp-media
 <div class="w-11/12 h-px bg-gray-500 lg:mt-20 mx-auto"></div>
 
 <section class="mt-10">
-    <div class="container mx-auto px-6 lg:px-12 lg:py-10 flex flex-col-reverse lg:flex-row items-start">
-        <!-- Bagian Gambar -->
-        <div class="lg:w-1/2 lg:ml-8 border-l border-white order-2 lg:order-1">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/igfyp.png"
-                alt="Peta Lokasi"
-                class="w-auto h-auto max-w-full max-h-full object-scale-down">
-        </div>
-
-        <!-- Bagian Teks -->
-        <div class="lg:w-1/3 flex flex-col items-start py-8 order-1 lg:order-2">
+    <div class="container mx-auto px-6 lg:px-12 lg:py-10 flex flex-col lg:flex-row items-start">
+        <!-- Bagian Teks (di sebelah kiri pada layar besar) -->
+        <div class="lg:w-1/3 flex flex-col items-start py-8 order-1 lg:order-1">
             <h3 class="text-white text-2xl md:text-2xl lg:text-3xl font-bold">
                 Social Media
             </h3>
@@ -123,8 +116,14 @@ Template Name: fyp-media
             </p>
             <p class="text-white">@fypmedia.id</p>
         </div>
-    </div>
 
+        <!-- Bagian Gambar (di sebelah kanan pada layar besar) -->
+        <div class="lg:w-3/4 lg:ml-8 border-l border-white order-2 lg:order-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/igfyp.png"
+                alt="Peta Lokasi"
+                class="w-auto h-auto max-w-full max-h-full object-scale-down">
+        </div>
+    </div>
 </section>
 
 <!-- Garis pemisah -->
@@ -134,7 +133,7 @@ Template Name: fyp-media
     <div class="container max-w-4xl mx-auto px-5 lg:px-5 mt-10 sm:mt-20 md:mt-24 lg:mt-30">
         <!-- Teks Hero -->
         <div class="text-left lg:text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-white">
+            <h1 class="text-4xl sm:text-5xl lg:text-5xl font-semibold text-white" style="line-height: 1.25;"    >
                 Cek Berbagai Event & Kolaborasi Yang Ada di FYP Media
             </h1>
         </div>
@@ -164,8 +163,9 @@ Template Name: fyp-media
     </div>
 
     <div class="text-center py-5">
-        <a href="" class="bg-custom-purple text-white px-6 py-2 rounded-full font-semibold hover:text-gray-200 transition">
-            Cek Event Lainnya <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
+    <a href="" class="bg-custom-purple text-white px-4 py-2 rounded-full font-semibold transition-transform transform hover:scale-105 shadow-lg">
+           Cek Event Lainnya
+            <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
         </a>
     </div>
     </div>
@@ -254,7 +254,7 @@ Template Name: fyp-media
             </p>
 
             <div class="flex justify-center sm:justify-start mt-8">
-                <a href="" class="bg-custom-purple text-white px-6 py-2 rounded-full font-semibold hover:text-gray-200 transition">
+                <a href="" class="bg-custom-purple text-white px-6 py-2 rounded-full font-semibold transition-transform duration-300 transform hover:scale-105">
                     Ayo ke Jelajah Jawa <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
                 </a>
             </div>
@@ -277,7 +277,7 @@ Template Name: fyp-media
 
     <!-- Konten Tombol di Atas -->
     <div class="relative z-20 flex justify-center mt-8">
-        <a href="" class="bg-custom-purple text-white px-8 py-2 rounded-full font-semibold hover:text-gray-200 transition shadow-lg">
+        <a href="" class="bg-custom-purple text-white px-8 py-2 rounded-full font-semibold transition-transform duration-300 transform hover:scale-105 shadow-lg">
             Ayo Bergabung Dengan FYP Media
             <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
         </a>
@@ -295,7 +295,7 @@ Template Name: fyp-media
                 Mau Diskusi Project Baru?
             </h1>
             <a href="<?php echo get_site_url() . '/about-us'; ?>"
-                class="hover:bg-purple-600 bg-custom-purple mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
+                class="bg-custom-purple mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
                 Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
             </a>
         </div>

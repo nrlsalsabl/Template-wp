@@ -61,7 +61,7 @@ get_template_part('layouts/header'); // Include header
                 while ($post_query->have_posts()) : $post_query->the_post();
                     $is_first_post = ($index === 0);
                     $grid_class = $is_first_post ? "md:col-span-1 row-span-2" : "";
-                    $image_class = $is_first_post ? "w-full max-h-96 object-cover rounded-2xl mx-auto" : " w-full max-h-48 object-cover rounded-2xl";
+                    $image_class = $is_first_post ? "w-full object-cover rounded-2xl mx-auto place-self-center" : " w-full max-h-64 object-cover rounded-2xl";
                     $padding_class = $is_first_post ? "p-1" : "p-1";
             ?>
                     <div class="flex flex-col bg-black <?php echo $padding_class; ?> rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 <?php echo $grid_class; ?>">
@@ -95,26 +95,25 @@ get_template_part('layouts/header'); // Include header
 <section class="mt-5">
     <div class="container mx-auto">
         <!-- Header Section -->
-        <div class="container flex justify-between items-center p-5">
+        <div class="flex justify-between items-center p-5">
             <h1 class="text-white text-4xl font-semibold flex items-center">
                 <span class="w-2 h-9 bg-red-500 rounded-full mr-3"></span> Blog Terbaru
             </h1>
-            <!-- Tombol More News untuk layar besar -->
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 hover:bg-pink-700 transition duration-200 text-center hidden md:inline-block">
+            <!-- Tombol More Blog untuk layar besar -->
+            <a href="#" class="hidden md:inline-block bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform duration-300 transform hover:scale-105">
                 More Blog<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
 
         <!-- Blog Cards Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-center mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 mt-4">
             <?php
-            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-            $post_query = new WP_Query(array(
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $post_query = new WP_Query([
                 'post_type'      => 'post',
                 'posts_per_page' => 6,
-                'paged'          => $paged
-            ));
+                'paged'          => $paged,
+            ]);
 
             if ($post_query->have_posts()) :
                 while ($post_query->have_posts()) : $post_query->the_post();
@@ -125,26 +124,27 @@ get_template_part('layouts/header'); // Include header
                                 <?php the_post_thumbnail('medium', ['class' => 'w-full h-64 object-cover rounded-lg']); ?>
                             <?php endif; ?>
                         </a>
-                        <div class="flex-grow p-2">
-                            <h3 class="text-xs font-semibold text-blue-300 uppercase tracking-wide mb-1">FYP Media Blog</h3>
-                            <h2 class="text-white text-lg font-bold hover:text-red-500 transition-colors mb-3">
+                        <div class="p-4">
+                            <h3 class="text-xs font-semibold text-blue-300 uppercase mb-1">FYP Media Blog</h3>
+                            <h2 class="text-white text-lg font-bold mb-3 hover:text-red-500 transition-colors">
                                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <p class="text-red-500 text-xs">By <?php echo get_the_author(); ?> - <?php echo get_the_date('j F Y'); ?></p>
+                            <p class="text-red-500 text-xs">By <?php the_author(); ?> - <?php the_date('j F Y'); ?></p>
                         </div>
                     </div>
             <?php
                 endwhile;
                 wp_reset_postdata();
             else :
-                echo '<p>No blog posts available.</p>';
+                echo '<p class="text-white">No blog posts available.</p>';
             endif;
             ?>
         </div>
 
-        <div class="hidden sm:hidden md:flex justify-center mt-7 space-x-2">
+        <!-- Pagination -->
+        <div class="hidden md:flex justify-center mt-7 space-x-2">
             <?php
-            echo paginate_links(array(
+            echo paginate_links([
                 'base'      => str_replace(99999, '%#%', esc_url(get_pagenum_link(99999))),
                 'format'    => '?paged=%#%',
                 'current'   => max(1, get_query_var('paged', 1)),
@@ -153,18 +153,19 @@ get_template_part('layouts/header'); // Include header
                 'next_text' => '<span class="px-3 py-2 border border-white text-white rounded-lg hover:bg-gray-800 transition">Next &raquo;</span>',
                 'before_page_number' => '<span class="px-3 py-2 border border-white text-white rounded-lg hover:bg-gray-800 transition">',
                 'after_page_number'  => '</span>'
-            ));
+            ]);
             ?>
         </div>
 
-        <!-- Tombol More News untuk layar kecil -->
+        <!-- Tombol More Blog untuk layar kecil -->
         <div class="flex justify-center mt-6 lg:hidden">
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full hover:bg-pink-700 transition duration-200 text-center">
-                More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
+            <a href="" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full hover:bg-pink-700 transition duration-200">
+                More Blog <i class="fi fi-rr-arrow-up-right text-white text-xs ml-3"></i>
             </a>
         </div>
     </div>
 </section>
+
 
 <!-- Divider -->
 <div class="w-full h-px bg-gray-500 mt-16 mx-auto"></div>

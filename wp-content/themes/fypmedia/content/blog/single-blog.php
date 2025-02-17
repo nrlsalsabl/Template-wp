@@ -60,21 +60,21 @@ get_template_part('layouts/header'); // Include header
 </section>
 
 <section class="mt-5">
-    <div class="container mx-auto p-3">
+    <div class="container mx-auto">
         <!-- Header Section -->
-        <div class="container flex justify-between items-center lg:p-5">
-            <h1 class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-start">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-start lg:ml-7 py-5">
                 <span class="inline-block w-1 h-6 lg:w-2 sm:h-8 md:h-9 lg:h-10 bg-red-500 rounded-full mr-2"></span>
-                Artikel Terkait
+                Latest Blog
             </h1>
             <!-- Tombol More News untuk layar besar -->
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform duration-300 transform hover:scale-105 text-center hidden md:inline-block">
-                More Article<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
+            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform transform hover:scale-105 text-center hidden md:inline-block">
+                More Blog<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>
 
         <!-- Blog Cards Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-center max-w-6xl mx-auto py-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto py-5">
             <?php
             // Query for 'post' (default blog posts)
             $post_query = new WP_Query(array(
@@ -84,13 +84,13 @@ get_template_part('layouts/header'); // Include header
             if ($post_query->have_posts()) :
                 while ($post_query->have_posts()) : $post_query->the_post();
             ?>
-                    <div class="flex flex-col bg-transparent rounded-lg shadow-lg overflow-hidden">
-                        <a href="<?php the_permalink(); ?>">
+                    <div class="flex flex-col bg-transparent rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105">
+                        <a href="<?php the_permalink(); ?>" class="block">
                             <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('medium', ['class' => 'w-full h-48 object-cover rounded-lg']); ?>
+                                <?php the_post_thumbnail('medium', ['class' => 'w-full h-48 object-cover rounded-t-lg']); ?>
                             <?php endif; ?>
                         </a>
-                        <div class="flex-grow p-2">
+                        <div class="flex-grow p-5 rounded-b-lg">
                             <h3 class="text-xs font-semibold text-blue-300 uppercase tracking-wide mb-1">FYP Media Blog</h3>
 
                             <h2 class="text-white text-lg font-bold hover:text-red-500 transition-colors mb-3">
@@ -108,14 +108,14 @@ get_template_part('layouts/header'); // Include header
                 endwhile;
                 wp_reset_postdata();
             else :
-                echo '<p>No blog posts available.</p>';
+                echo '<p class="text-white">No blog posts available.</p>';
             endif;
             ?>
         </div>
 
         <!-- Tombol More News untuk layar kecil -->
         <div class="flex justify-center mt-6 lg:hidden">
-            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform duration-300 transform hover:scale-105 text-center">
+            <a href="#" class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform transform hover:scale-105 text-center">
                 More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
             </a>
         </div>

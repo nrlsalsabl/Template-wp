@@ -43,24 +43,25 @@
                         </div>
                         <div class="absolute bottom-0 left-0 w-full p-3 sm:p-4 bg-gradient-to-t from-black/70 to-transparent">
                             <h3 class="text-lg sm:text-2xl font-semibold text-white mb-1 sm:mb-2"><?= esc_html($talent['title']) ?></h3>
-                            <div class="flex items-center gap-3 sm:gap-5">
-                                <div class="social-links flex gap-2 sm:gap-4">
+                            <div class="flex items-center gap-3 left-0">
+                                <div class="social-links flex gap-3 left-0">
                                     <?php if ($talent['instagram']) : ?>
-                                        <a href="<?= esc_url($talent['instagram']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
-                                            <i class="fab fa-instagram text-white"></i>
+                                        <a href="<?= esc_url($talent['instagram']) ?>" target="_blank" class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10 rounded-full border border-white hover:bg-gray-700">
+                                            <i class="fab fa-instagram text-white text-lg"></i>
                                         </a>
                                     <?php endif; ?>
                                     <?php if ($talent['tiktok']) : ?>
-                                        <a href="<?= esc_url($talent['tiktok']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
-                                            <i class="fab fa-tiktok text-white"></i>
+                                        <a href="<?= esc_url($talent['tiktok']) ?>" target="_blank" class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10 rounded-full border border-white hover:bg-gray-700">
+                                            <i class="fab fa-tiktok text-white text-lg"></i>
                                         </a>
                                     <?php endif; ?>
                                     <?php if ($talent['youtube']) : ?>
-                                        <a href="<?= esc_url($talent['youtube']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
-                                            <i class="fab fa-youtube text-white"></i>
+                                        <a href="<?= esc_url($talent['youtube']) ?>" target="_blank" class="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-10 md:h-10 rounded-full border border-white hover:bg-gray-700">
+                                            <i class="fab fa-youtube text-white text-lg"></i>
                                         </a>
                                     <?php endif; ?>
                                 </div>
+
                             </div>
                         </div>
                     </a>
@@ -89,7 +90,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        let itemsPerPage = 6; // Biar lebih pas di mobile
+        let itemsPerPage = 6;
         let talents = document.querySelectorAll(".talent-card");
         let totalItems = talents.length;
         let currentPage = 1;

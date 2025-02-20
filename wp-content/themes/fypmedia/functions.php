@@ -167,21 +167,17 @@ class WP_Tailwind_Navwalker extends Walker_Nav_Menu
         }
     }
 
-    // End Level - penutupan untuk submenu
     function end_lvl(&$output, $depth = 0, $args = null)
     {
         $output .= '</ul>';
     }
 
-    // Start Element - untuk menambahkan styling pada menu
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
     {
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
-
-        // Handle classes for dropdown item
         if ($depth == 0 && in_array('menu-item-has-children', $classes)) {
-            $classes[] = 'relative group';  // Make the parent item have the ability to show the dropdown
+            $classes[] = 'relative group';  
         }
 
         $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
@@ -209,9 +205,41 @@ class WP_Tailwind_Navwalker extends Walker_Nav_Menu
 function enqueue_custom_scripts()
 {
     wp_enqueue_style('custom-infinite-scroll', get_template_directory_uri() . '/style.css');
-
-    
     wp_enqueue_script('custom-infinite-scroll', get_template_directory_uri() . '/assets/js/infinite-scroll.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+
+
+// Menyimpan jumlah views
+function track_post_views($post_id)
+{
+    if (is_single()) {
+        $meta_key = 'post_views_count';
+        $views = get_post_meta($post_id, $meta_key, true);
+        if (empty($views)) {
+            $views = 0;
+            delete_post_meta($post_id, $meta_key);
+            add_post_meta($post_id, $meta_key, $views);
+        } else {
+            $views++;
+            update_post_meta($post_id, $meta_key, $views);
+        }
+    }
+}
+add_action('wp_head', 'track_post_views');
+
+// Menampilkan jumlah views
+function get_post_views($post_id)
+{
+    $views = get_post_meta($post_id, 'post_views_count', true);
+    if ($views == '') {
+        $views = 0;
+        delete_post_meta($post_id, 'post_views_count');
+        add_post_meta($post_id, 'post_views_count', $views);
+    }
+    return $views;
+}
+
+
 

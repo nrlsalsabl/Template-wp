@@ -39,7 +39,6 @@
     @media (min-width: 768px) {
         .infinite-slider img {
             width: 128px;
-            /* Ukuran lebih besar di layar besar */
         }
     }
 </style>
@@ -50,14 +49,11 @@
         const sliderImages = Array.from(slider.children);
         let scrollPosition = 0;
         const imageWidth = sliderImages[0].offsetWidth + 20; // Lebar gambar + margin-right
-
-        // Duplikat gambar untuk seamless effect
         sliderImages.forEach(img => {
             const clone = img.cloneNode(true);
             slider.appendChild(clone);
         });
 
-        // Fungsi animasi infinite scroll
         function animateSlider() {
             scrollPosition += 0.5;
             if (scrollPosition >= imageWidth * sliderImages.length / 2) {
@@ -68,7 +64,6 @@
             requestAnimationFrame(animateSlider);
         }
 
-        // Mulai animasi
         animateSlider();
     });
 </script>

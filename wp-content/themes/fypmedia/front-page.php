@@ -136,7 +136,6 @@ include 'layouts/header.php'; // Menyertakan header.php
             </a>
         </div>
 
-        <!-- Cards Section -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mx-auto px-4 sm:px-6 lg:8 mt-5">
             <?php
             $news_query = new WP_Query(array(

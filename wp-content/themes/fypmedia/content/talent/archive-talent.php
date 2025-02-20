@@ -1,11 +1,9 @@
-<?php
-get_template_part('layouts/header');
-?>
+<?php get_template_part('layouts/header'); ?>
 
-<div class="mx-auto p-6 px-20">
-    <div class="mt-8">
-        <h1 class="text-7xl font-bold mb-6 text-white">Our Talent</h1>
-        <p class="text-white text-2xl max-w-5xl">
+<div class="container mx-auto p-4 sm:p-6 lg:px-7">
+    <div class="mt-6 sm:mt-8">
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-white">Our Talent</h1>
+        <p class="text-white text-lg sm:text-2xl max-w-5xl">
             Temukan individu-individu berbakat yang membuat agensi kami berkembang. Apakah Anda memiliki pertanyaan tentang bakat kami, harga, portofolio, atau hal lainnya, tim kami siap membantu Anda.
         </p>
     </div>
@@ -13,7 +11,7 @@ get_template_part('layouts/header');
     <?php
     $args = array(
         'post_type' => 'talent',
-        'posts_per_page' => -1, 
+        'posts_per_page' => -1,
     );
     $query = new WP_Query($args);
     $talents = [];
@@ -34,31 +32,31 @@ get_template_part('layouts/header');
     wp_reset_postdata();
     ?>
 
-    <div class="container mx-auto py-12 mt-8">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="talentContainer">
+    <div class="container mx-auto py-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="talentContainer">
             <?php foreach ($talents as $index => $talent) : ?>
                 <div class="talent-card bg-[#1a202c] rounded-lg overflow-hidden shadow-lg relative max-h-96" data-index="<?= $index ?>">
                     <a href="<?= esc_url($talent['permalink']) ?>" class="block relative">
                         <div class="relative max-h-96 overflow-hidden">
                             <div class="absolute inset-0 bg-black opacity-10"></div>
-                            <img src="<?= esc_url($talent['thumbnail']) ?>" alt="<?= esc_attr($talent['title']) ?>" class="w-full h-96 object-cover object-center">
+                            <img src="<?= esc_url($talent['thumbnail']) ?>" alt="<?= esc_attr($talent['title']) ?>" class="w-full h-80 sm:h-96 object-cover object-center">
                         </div>
-                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent">
-                            <h3 class="text-2xl font-semibold text-white mb-2"><?= esc_html($talent['title']) ?></h3>
-                            <div class="flex items-center gap-5">
-                                <div class="social-links flex gap-4">
+                        <div class="absolute bottom-0 left-0 w-full p-3 sm:p-4 bg-gradient-to-t from-black/70 to-transparent">
+                            <h3 class="text-lg sm:text-2xl font-semibold text-white mb-1 sm:mb-2"><?= esc_html($talent['title']) ?></h3>
+                            <div class="flex items-center gap-3 sm:gap-5">
+                                <div class="social-links flex gap-2 sm:gap-4">
                                     <?php if ($talent['instagram']) : ?>
-                                        <a href="<?= esc_url($talent['instagram']) ?>" target="_blank" class="rounded-full border border-white p-2 hover:bg-gray-700">
+                                        <a href="<?= esc_url($talent['instagram']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
                                             <i class="fab fa-instagram text-white"></i>
                                         </a>
                                     <?php endif; ?>
                                     <?php if ($talent['tiktok']) : ?>
-                                        <a href="<?= esc_url($talent['tiktok']) ?>" target="_blank" class="rounded-full border border-white p-2 hover:bg-gray-700">
+                                        <a href="<?= esc_url($talent['tiktok']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
                                             <i class="fab fa-tiktok text-white"></i>
                                         </a>
                                     <?php endif; ?>
                                     <?php if ($talent['youtube']) : ?>
-                                        <a href="<?= esc_url($talent['youtube']) ?>" target="_blank" class="rounded-full border border-white p-2 hover:bg-gray-700">
+                                        <a href="<?= esc_url($talent['youtube']) ?>" target="_blank" class="rounded-full border border-white p-2 sm:p-3 hover:bg-gray-700">
                                             <i class="fab fa-youtube text-white"></i>
                                         </a>
                                     <?php endif; ?>
@@ -70,36 +68,28 @@ get_template_part('layouts/header');
             <?php endforeach; ?>
         </div>
 
-        <div class="pagination mt-12 flex justify-center items-center space-x-2">
-            <ul class="flex space-x-2">
-                <li>
-                    <button id="prevBtn" class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-600">« Prev</button>
-                </li>
-                <div id="pageNumbers" class="flex space-x-2"></div>
-                <li>
-                    <button id="nextBtn" class="px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-600">Next »</button>
-                </li>
-            </ul>
+        <div class="pagination mt-10 flex justify-center items-center space-x-1 sm:space-x-2">
+            <button id="prevBtn" class="px-3 sm:px-4 py-1 sm:py-2 bg-white text-black rounded-lg hover:bg-gray-600">« Prev</button>
+            <div id="pageNumbers" class="flex space-x-1 sm:space-x-2"></div>
+            <button id="nextBtn" class="px-3 sm:px-4 py-1 sm:py-2 bg-white text-black rounded-lg hover:bg-gray-600">Next »</button>
         </div>
-
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-between text-white border-t-2 border-white mt-10 py-10">
-        <h3 class="text-4xl md:text-5xl font-semibold text-center md:text-left">
+    <div class="flex flex-col md:flex-row items-start justify-between text-white border-t-2 border-white mt-10 py-8 sm:py-10 sm:px-10 lg:px-20">
+        <h3 class="text-4xl sm:text-4xl md:text-5xl font-semibold md:text-left">
             Mau Diskusi Project Baru?
         </h3>
-        <a href="#" class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-lg font-medium transition-transform transform hover:scale-105">
+        <a href="#" class="mt-4 md:mt-0 px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-lg font-medium transition-transform transform hover:scale-105">
             Contact Us
         </a>
     </div>
-
 </div>
 
 <?php get_template_part('layouts/footer'); ?>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        let itemsPerPage = 9;
+        let itemsPerPage = 6; // Biar lebih pas di mobile
         let talents = document.querySelectorAll(".talent-card");
         let totalItems = talents.length;
         let currentPage = 1;
@@ -118,11 +108,11 @@ get_template_part('layouts/header');
         }
 
         function updatePagination() {
-            pageNumbersContainer.innerHTML = ""; 
+            pageNumbersContainer.innerHTML = "";
             for (let i = 1; i <= totalPages; i++) {
                 let pageBtn = document.createElement("button");
                 pageBtn.innerText = i;
-                pageBtn.classList.add("px-4", "py-2", "rounded-lg", "hover:bg-gray-600");
+                pageBtn.classList.add("px-2", "sm:px-4", "py-1", "sm:py-2", "rounded-lg", "hover:bg-gray-600");
                 pageBtn.classList.add(i === currentPage ? "bg-blue-500 text-white" : "bg-gray-700 text-white");
                 pageBtn.addEventListener("click", function() {
                     currentPage = i;
@@ -148,6 +138,7 @@ get_template_part('layouts/header');
         showPage(currentPage);
     });
 </script>
+
 
 <style>
     .pagination ul {

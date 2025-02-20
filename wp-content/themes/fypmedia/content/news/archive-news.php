@@ -9,7 +9,6 @@ get_template_part('layouts/header');
 
     <section>
         <div class="hidden md:flex flex-col md:flex-row items-center justify-between mt-3 mx-4 md:mx-28 space-y-4 md:space-y-0">
-            <!-- Kategori Link -->
             <div class="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-6 text-white">
                 <a href="<?php echo esc_url(home_url('/?category=tech')); ?>" class="hover:text-red-800">Semua</a>
                 <a href="<?php echo esc_url(home_url('/?category=lifestyle')); ?>" class="hover:text-red-800">Financial</a>
@@ -20,8 +19,6 @@ get_template_part('layouts/header');
                 <a href="<?php echo esc_url(home_url('/?category=health')); ?>" class="hover:text-red-800">Sport</a>
                 <a href="<?php echo esc_url(home_url('/?category=health')); ?>" class="hover:text-red-800">Culture</a>
             </div>
-
-            <!-- Search Bar -->
             <div class="hidden md:relative w-full md:w-64 md:block">
                 <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex items-center">
                     <input type="search" name="s" placeholder="Cari Blog" class="w-full px-4 py-2 rounded-full bg-gray-700 text-white focus:outline-none" value="<?php echo get_search_query(); ?>" />
@@ -129,8 +126,6 @@ get_template_part('layouts/header');
     ?>
 
 
-
-    <!-- INI BERITA TRENDING -->
     <div class="text-white text-5xl mt-20 border-y-2 border-red-100 border-opacity-20 px-4">
         Berita Trending
     </div>
@@ -153,7 +148,6 @@ get_template_part('layouts/header');
             </div>
         </div>
 
-        <!-- Bagian Kanan: Grid Artikel -->
         <div class="w-full lg:w-1/2">
             <div class="grid grid-cols-2 gap-3">
                 <?php
@@ -207,12 +201,10 @@ get_template_part('layouts/header');
         </div>
     </div>
 
-
-    <!-- INI UNTUK BERITA TERBARU -->
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $args = array(
-        'post_type'      => 'news', // Ganti dengan post type yang sesuai
+        'post_type'      => 'news', 
         'posts_per_page' => 6,
         'paged'          => $paged,
         'orderby'        => 'date',

@@ -35,7 +35,7 @@ get_template_part('layouts/header');
 
     <div class="hidden w-full h-px bg-gray-500 mt-5 mx-auto md:block"></div>
 
-    <h1 class="text-5xl font-semibold mb-6 text-white px-4 mt-10">Fresh News</h1>
+    <h1 class="text-5xl font-semibold mb-6 text-white px-4 mt-10 border-y-2 border-l-4 border-red-600">Fresh News</h1>
 
 
     <?php
@@ -69,7 +69,7 @@ get_template_part('layouts/header');
                         <?php endif; ?>
                         <div class="absolute inset-0 bg-black opacity-40 rounded-lg"></div>
                         <div class="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                            <h2 class="text-3xl font-semibold leading-tight">
+                            <h2 class="text-lg sm:text-lg md:text-3xl font-semibold leading-tight">
                                 <?php echo esc_html(get_the_title($featured->ID)); ?>
                             </h2>
                             <p class="text-sm mt-2">
@@ -101,7 +101,7 @@ get_template_part('layouts/header');
                                 </a>
                                 <div class="flex flex-col flex-1">
                                     <a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-                                        <h2 class="text-white text-lg font-semibold leading-snug">
+                                        <h2 class="text-white text-sm sm:text-sm md:text-lg font-semibold leading-snug">
                                             <?php echo esc_html(get_the_title($post->ID)); ?>
                                         </h2>
                                     </a>
@@ -126,9 +126,10 @@ get_template_part('layouts/header');
     ?>
 
 
-    <div class="text-white text-5xl mt-20 border-y-2 border-red-100 border-opacity-20 px-4">
+    <div class="text-white text-4xl sm:text-4xl md:text-5xl mt-20 border-y-2 border-l-4 border-red-600 border-opacity-20 px-4 pl-3">
         Berita Trending
     </div>
+
 
     <div class="w-full h-auto mx-auto px-4 flex flex-col lg:flex-row items-start gap-4 mt-10">
         <div class="w-full lg:w-2/3">
@@ -204,7 +205,7 @@ get_template_part('layouts/header');
     <?php
     $paged = get_query_var('paged') ? get_query_var('paged') : 1;
     $args = array(
-        'post_type'      => 'news', 
+        'post_type'      => 'news',
         'posts_per_page' => 6,
         'paged'          => $paged,
         'orderby'        => 'date',
@@ -215,8 +216,8 @@ get_template_part('layouts/header');
 
     <div class="px-4 mt-20">
         <div class="flex flex-col md:flex-row items-center justify-between mb-4">
-            <h2 class="text-5xl text-white mb-4 md:mb-0">Berita Terbaru</h2>
-            <a href="#" class="px-4 py-2 border border-white/60 text-white rounded-full hover:bg-gray-800 transition">
+            <h2 class="text-5xl font-semibold mb-6 text-white px-4 mt-10 border-y-2 border-l-4 border-red-600">Berita Terbaru</h2>
+            <a href="#" class="px-4 py-2 border border-white/60 text-white rounded-full hidden md:block hover:bg-gray-800 transition">
                 More News
             </a>
         </div>

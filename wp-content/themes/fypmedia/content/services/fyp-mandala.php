@@ -4,12 +4,12 @@
 
     <!-- Konten Kiri -->
     <div class="w-full md:w-1/2 md:p-8 rounded-lg shadow-lg mt-10 text-left md:text-left">
-        <div class="flex items-center justify-center md:justify-start space-x-4">
+        <div class="flex items-center justify-left md:justify-start space-x-4">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/bytedance.png" alt="ByteDance Logo" class="w-20 sm:w-24 md:w-28 h-auto" />
             <p class="text-white text-lg sm:text-xl font-semibold">x</p>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fypmedia.png" alt="FYP Media Logo" class="w-20 sm:w-24 md:w-28 h-auto" />
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white mt-4 leading-tight">
+        <h2 class="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-medium text-white mt-2 sm:mt-2 md:mt-4 leading-tight">
             Strategi Konten<br /> Untuk
             <span class="text-purple-400">Naikan<br /> Karir Kamu</span>
         </h2>
@@ -40,8 +40,8 @@
 <?php get_template_part('layouts/logoslider'); ?>
 
 <div class="">
-    <svg width="1439" class="mt-16" height="4" viewBox="0 0 1439 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="1440" height="4" rx="2" fill="url(#paint0_linear_3687_1545)" />
+    <svg class="mt-16 w-full h-1 sm:h-2 md:h-3 lg:h-4" viewBox="0 0 1439 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" rx="2" fill="url(#paint0_linear_3687_1545)" />
         <defs>
             <linearGradient id="paint0_linear_3687_1545" x1="-44" y1="4" x2="1498.5" y2="2" gradientUnits="userSpaceOnUse">
                 <stop offset="0.0286094" stop-color="#BC49F9" stop-opacity="0" />
@@ -52,103 +52,59 @@
     </svg>
 
     <!-- Judul Utama -->
-    <h2 class="text-center text-white text-3xl sm:text-4xl md:text-5xl mt-10">
+    <h2 class="text-start px-4 sm:px-4 md:px-0 sm:text-start md:text-center  text-white text-3xl sm:text-4xl md:text-5xl mt-10 font-semibold">
         Bergabunglah dengan kami dan raih
     </h2>
-    <h2 class="text-center text-purple-600 text-3xl sm:text-4xl md:text-5xl mt-4">
+    <h2 class="text-start px-4 sm:px-4 md:px-0 sm:text-start md:text-center text-purple-600 text-3xl sm:text-4xl md:text-5xl font-semibold">
         kesuksesan sebagai kreator di TikTok.
     </h2>
 
     <!-- Container Kriteria -->
-    <div class="border border-purple-500 w-full sm:w-10/12 md:w-8/12 h-auto rounded-xl mx-auto mt-10 overflow-hidden">
-        <div class="px-4 sm:px-8 md:px-16 py-8 sm:py-10 mx-auto">
-            <!-- Header Kriteria -->
-            <div class="flex flex-col sm:flex-row items-center justify-between mb-4">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl text-white text-center sm:text-left">
-                    Kriteria yg harus<br />kamu punya:
-                </h2>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fypmedia.png" alt="logofypmedia"
-                    class="w-1/3 sm:w-1/4 md:w-1/5 h-auto object-cover mt-4 sm:mt-0" />
-            </div>
+    <div class="w-full max-w-6xl mx-auto mt-10 p-6 sm:p-10 bg-transparent border border-purple-500 rounded-xl overflow-hidden">
+        <!-- Header Kriteria -->
+        <div class="flex flex-col sm:flex-row items-center justify-between mb-6">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl text-white text-center sm:text-left leading-tight">
+                Kriteria yang harus<br />kamu punya:
+            </h2>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/fypmedia.png" alt="logofypmedia"
+                class="w-24 sm:w-28 md:w-32 h-auto object-contain mt-4 sm:mt-0" />
+        </div>
 
-            <!-- Pemisah "Daftar Kriteria" -->
-            <div class="flex items-center justify-center w-full mt-10">
-                <div class="flex items-center w-full">
-                    <div class="border-t-2 border-white w-full mr-4"></div>
-                    <span class="mx-2 text-xl sm:text-2xl md:text-3xl w-5/12 text-white text-center">Daftar Kriteria</span>
-                    <div class="border-t-2 border-white w-full ml-4"></div>
-                </div>
-            </div>
-
-            <!-- Daftar Kriteria -->
-            <div class="mt-10 space-y-8">
-                <!-- Kriteria 1 -->
-                <div class="flex flex-col sm:flex-row items-center border-b-2 border-white pb-4 border-opacity-20 justify-between">
-                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl text-center sm:text-left">
-                        Memiliki Akun TikTok dengan minimal 2k Followers
-                    </h3>
-                    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
-                        <path
-                            d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
-                            fill="#0F1017" transform="translate(6, 6)" />
-                    </svg>
-                </div>
-
-                <!-- Kriteria 2 -->
-                <div class="flex flex-col sm:flex-row items-center border-b-2 border-white pb-4 justify-between border-opacity-20">
-                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl text-center sm:text-left">
-                        Berusia minimal 18 tahun
-                    </h3>
-                    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
-                        <path
-                            d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
-                            fill="#0F1017" transform="translate(6, 6)" />
-                    </svg>
-                </div>
-
-                <!-- Kriteria 3 -->
-                <div class="flex flex-col sm:flex-row items-center border-b-2 border-white pb-4 justify-between border-opacity-20">
-                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl text-center sm:text-left">
-                        Konten yang dibuat tidak mengandung SARA
-                    </h3>
-                    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
-                        <path
-                            d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
-                            fill="#0F1017" transform="translate(6, 6)" />
-                    </svg>
-                </div>
-
-                <!-- Kriteria 4 -->
-                <div class="flex flex-col sm:flex-row items-center border-b-2 border-white pb-4 justify-between border-opacity-20">
-                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl text-center sm:text-left">
-                        Memiliki keinginan untuk grow
-                    </h3>
-                    <svg width="28" height="28" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
-                        <path
-                            d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
-                            fill="#0F1017" transform="translate(6, 6)" />
-                    </svg>
-                </div>
-
-                <!-- Kriteria 5 (duplikat Kriteria 1) -->
-                <div class="flex flex-col sm:flex-row items-center border-b-2 border-white pb-4 justify-between border-opacity-20">
-                    <h3 class="text-white text-xl sm:text-2xl md:text-3xl text-center sm:text-left">
-                        Memiliki Akun TikTok dengan minimal 2k Followers
-                    </h3>
-                    <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
-                        <path
-                            d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
-                            fill="#0F1017" transform="translate(6, 6)" />
-                    </svg>
-                </div>
+        <!-- Pemisah "Daftar Kriteria" -->
+        <div class="flex items-center justify-center w-full my-8">
+            <div class="flex items-center w-full">
+                <div class="border-t-2 border-white w-full"></div>
+                <span class="mx-4 text-xl sm:text-2xl md:text-3xl text-white text-center whitespace-nowrap">Daftar Kriteria</span>
+                <div class="border-t-2 border-white w-full"></div>
             </div>
         </div>
+
+        <!-- Daftar Kriteria -->
+        <div class="space-y-6">
+            <!-- Looping daftar kriteria -->
+            <?php
+            $kriteria = [
+                "Memiliki Akun TikTok dengan minimal 2k Followers",
+                "Berusia minimal 18 tahun",
+                "Konten yang dibuat tidak mengandung SARA",
+                "Memiliki keinginan untuk grow",
+                "Semangat dan selalu aktif membuat konten"
+            ];
+            foreach ($kriteria as $item) : ?>
+                <div class="flex items-center justify-between border-b border-white border-opacity-20 pb-6">
+                    <h3 class="text-white text-base sm:text-lg md:text-xl lg:text-2xl text-left">
+                        <?= $item; ?>
+                    </h3>
+                    <svg class="w-6 sm:w-7 md:w-10 lg:w-8 h-auto" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="22" cy="22" r="22" fill="#06D8FB" />
+                        <path d="M30.4971 9.24805L12.75 27.0117L3.50293 17.748L4.99707 16.2539L12.75 23.9902L29.0029 7.75391L30.4971 9.24805Z"
+                            fill="#0F1017" transform="translate(6, 6)" />
+                    </svg>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
+
 
 
     <svg width="1439" class="mt-20" height="4" viewBox="0 0 1439 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -166,8 +122,8 @@
 
 <div class="text-white w-full h-auto">
     <div class="mt-20">
-        <h2 class="text-5xl text-center">Bergabunglah dengan kami dan raih</h2>
-        <h2 class="text-5xl text-center mt-5"> kesuksesan sebagai kreator di Tiktok</h2>
+        <h2 class="text-3xl sm:text-3xl lg:text-5xl text-start px-4 font-semibold sm:px-4 sm:text-start lg:text-center">Bergabunglah dengan kami dan raih</h2>
+        <h2 class="text-3xl sm:text-3xl lg:text-5xl text-start px-4 font-semibold sm:px-4 sm:text-start lg:text-center"> kesuksesan sebagai kreator di Tiktok</h2>
     </div>
 
     <div class="mt-20">
@@ -369,12 +325,20 @@
     </div>
 
     <div class="">
-        <div class="text-white text-center">
-            <h2 class="text-5xl mt-10 mb-0">Jadilah bagian dari MCN FYP Mandala<br />
-                dan bekerja sama dengan TikTok sebagai<br /> creator resmi</h2>
-            <p class="text-1xl mt-6">Setiap partner MCN resmi TikTok berfungsi sebagai tim pemilik platform & menjalin<br /> kemitraan dengan semua brand yang ada di TikTok Shop</p>
+        <!-- Heading Section -->
+        <div class="text-white text-center px-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mt-10 leading-tight">
+                Jadilah bagian dari MCN FYP Mandala<br />
+                dan bekerja sama dengan TikTok sebagai<br />
+                creator resmi
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl mt-6 leading-relaxed">
+                Setiap partner MCN resmi TikTok berfungsi sebagai tim pemilik platform & menjalin<br />
+                kemitraan dengan semua brand yang ada di TikTok Shop
+            </p>
         </div>
 
+        <!-- Image Section (Layout Tidak Berubah) -->
         <div class="flex items-center justify-center mt-10 relative">
             <div class="relative w-4/12">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/mandala/peps/cw1.png"
@@ -395,13 +359,14 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent opacity-90"></div>
             </div>
 
-            <button class="absolute z-30 bg-purple-500 text-white p-3 w-96 text-center rounded-full transform -translate-x-1/2 left-1/2 bottom-10 font-semibold">
+            <!-- CTA Button -->
+            <button class="absolute z-30 bg-purple-500 text-white py-2 px-4 sm:py-3 sm:px-6 md:px-12 text-center rounded-full text-xs sm:text-lg font-semibold transform -translate-x-1/2 left-1/2 bottom-4 sm:bottom-8 md:bottom-10 transition hover:scale-105 w-[90%] sm:w-auto max-w-xs sm:max-w-md">
                 Mari Majukan Karir Kamu Sebagai Content Creator
             </button>
-
         </div>
 
-        <svg width="1439" class="mt-20" height="4" viewBox="0 0 1439 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Gradient Divider -->
+        <svg width="100%" class="mt-20" height="4" viewBox="0 0 1439 4" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="1440" height="4" rx="2" fill="url(#paint0_linear_3687_1545)" />
             <defs>
                 <linearGradient id="paint0_linear_3687_1545" x1="-44" y1="4" x2="1498.5" y2="2" gradientUnits="userSpaceOnUse">
@@ -413,12 +378,14 @@
         </svg>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-between text-white border-opacity-20 border-t-2 border-white mt-10 py-10 px-32">
-        <h3 class="text-3xl md:text-5xl font-semibold text-center md:text-left">
+    <!-- Contact Section -->
+    <div class="flex flex-col md:flex-row items-center justify-between text-white border-opacity-20 border-t-2 border-white mt-10 py-10 px-6 sm:px-12 md:px-20 lg:px-32">
+        <h3 class="text-2xl sm:text-3xl md:text-5xl font-semibold text-center md:text-left">
             Mau Diskusi Project Baru?
         </h3>
-        <a href="#" class="px-8 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-lg font-medium transition-transform transform hover:scale-105">
+        <a href="#" class="px-6 py-3 sm:px-8 sm:py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-sm sm:text-lg font-medium transition-transform transform hover:scale-105 mt-4 md:mt-0">
             Contact Us
         </a>
     </div>
+
 </div>

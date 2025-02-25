@@ -21,16 +21,51 @@ get_template_part('layouts/header'); // Include header
 
         <!-- Search Bar -->
         <div class="hidden md:relative w-full md:w-64 md:block">
-            <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex items-center">
-                <input type="search" name="s" placeholder="Cari Blog" class="w-full px-4 py-2 rounded-full bg-gray-700 text-white focus:outline-none" value="<?php echo get_search_query(); ?>" />
-                <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>" class="flex items-center relative">
+                <!-- Tombol Hapus, hanya muncul jika ada teks di input -->
+                <button type="button" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-white focus:outline-none" id="clear-search" style="display: none;" onclick="clearSearch()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <line x1="6" y1="18" x2="18" y2="6" stroke-width="2" stroke="currentColor" stroke-linecap="round" />
+                        <line x1="6" y1="6" x2="18" y2="18" stroke-width="2" stroke="currentColor" stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Input Search -->
+                <input type="search" name="s" placeholder="Cari Blog" class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-700 text-white focus:outline-none" value="<?php echo get_search_query(); ?>" id="search-input" oninput="toggleClearButton()" />
+
+                <!-- Tombol Search -->
+                <button type="submit" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <circle cx="11" cy="11" r="7" stroke-width="2" stroke="currentColor" fill="none" />
                         <line x1="16" y1="16" x2="21" y2="21" stroke-width="2" stroke="currentColor" stroke-linecap="round" />
                     </svg>
                 </button>
             </form>
         </div>
+
+        <script>
+            // Fungsi untuk menampilkan dan menyembunyikan tombol hapus berdasarkan input
+            function toggleClearButton() {
+                var input = document.getElementById('search-input');
+                var clearButton = document.getElementById('clear-search');
+                if (input.value.length > 0) {
+                    clearButton.style.display = 'block'; // Menampilkan tombol hapus
+                } else {
+                    clearButton.style.display = 'none'; // Menyembunyikan tombol hapus
+                }
+            }
+
+            // Fungsi untuk menghapus teks input saat tombol hapus diklik
+            function clearSearch() {
+                document.getElementById('search-input').value = ''; // Mengosongkan input
+                document.getElementById('clear-search').style.display = 'none'; // Menyembunyikan tombol hapus
+                document.getElementById('search-input').focus(); // Fokus kembali ke input
+            }
+
+            // Menjalankan toggleClearButton setiap kali halaman dimuat untuk memeriksa apakah ada teks
+            document.addEventListener('DOMContentLoaded', toggleClearButton);
+        </script>
+
     </div>
 </section>
 
@@ -40,16 +75,16 @@ get_template_part('layouts/header'); // Include header
 <div class="hidden w-full h-px bg-gray-500 mt-5 mx-auto md:block"></div>
 
 <section class="mt-8">
-    <div class="container mx-auto px-6">
+    <div class="container mx-auto">
         <!-- Header Section -->
-        <div class="mb-6">
+        <div class="mb-6 p-6">
             <h1 class="text-white text-4xl font-semibold flex items-center">
                 <span class="w-2 h-9 bg-red-500 rounded-full mr-3"></span> Blog Trend
             </h1>
         </div>
 
         <!-- Blog Grid Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
             <?php
             $post_query = new WP_Query([
                 'post_type'      => 'post',
@@ -61,8 +96,8 @@ get_template_part('layouts/header'); // Include header
                 while ($post_query->have_posts()) : $post_query->the_post();
                     $is_first_post = ($index === 0);
                     $grid_class = $is_first_post ? "md:col-span-1 row-span-2" : "";
-                    $image_class = $is_first_post ? "w-full object-cover rounded-2xl mx-auto place-self-center" : " w-full max-h-64 object-cover rounded-2xl";
-                    $padding_class = $is_first_post ? "p-1" : "p-1";
+                    $image_class = $is_first_post ? "w-full object-cover rounded-2xl mx-auto place-self-center" : " w-full max-h-48 object-cover rounded-2xl";
+                    $padding_class = $is_first_post ? "p-1" : "p-2";
             ?>
                     <div class="flex flex-col bg-black <?php echo $padding_class; ?> rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 <?php echo $grid_class; ?>">
                         <a href="<?php the_permalink(); ?>">
@@ -142,19 +177,77 @@ get_template_part('layouts/header'); // Include header
         </div>
 
         <!-- Pagination -->
-        <div class="hidden md:flex justify-center mt-7 space-x-2">
-            <?php
-            echo paginate_links([
-                'base'      => str_replace(99999, '%#%', esc_url(get_pagenum_link(99999))),
-                'format'    => '?paged=%#%',
-                'current'   => max(1, get_query_var('paged', 1)),
-                'total'     => $post_query->max_num_pages,
-                'prev_text' => '<span class="px-3 py-2 border border-white text-white rounded-lg hover:bg-gray-800 transition">&laquo; Prev</span>',
-                'next_text' => '<span class="px-3 py-2 border border-white text-white rounded-lg hover:bg-gray-800 transition">Next &raquo;</span>',
-                'before_page_number' => '<span class="px-3 py-2 border border-white text-white rounded-lg hover:bg-gray-800 transition">',
-                'after_page_number'  => '</span>'
-            ]);
-            ?>
+        <div class="flex items-center justify-betwee px-4 py-3 sm:px-6">
+            <!-- Mobile View -->
+            <div class="flex flex-1 justify-between sm:hidden">
+                <?php
+                echo paginate_links([
+                    'base'      => str_replace(99999, '%#%', esc_url(get_pagenum_link(99999))),
+                    'format'    => '?paged=%#%',
+                    'current'   => max(1, get_query_var('paged', 1)),
+                    'total'     => $post_query->max_num_pages,
+                    'prev_text' => '<span class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</span>',
+                    'next_text' => '<span class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</span>',
+                ]);
+                ?>
+            </div>
+
+            <!-- Desktop View -->
+            <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
+                <!-- Showing Results -->
+                <div class="pagination-info bg-gray-800 p-4 rounded-lg shadow-lg">
+                    <p class="text-sm text-white">
+                        Showing
+                        <span class="font-medium text-blue-300"><?php echo (max(1, get_query_var('paged', 1)) - 1) * $post_query->query_vars['posts_per_page'] + 1; ?></span>
+                        to
+                        <span class="font-medium text-blue-300"><?php echo min(max(1, get_query_var('paged', 1)) * $post_query->query_vars['posts_per_page'], $post_query->found_posts); ?></span>
+                        of
+                        <span class="font-medium text-blue-300"><?php echo $post_query->found_posts; ?></span>
+                        results
+                        <span class="text-white font-medium">
+                            (Page <?php echo max(1, get_query_var('paged', 1)); ?> of <?php echo ceil($post_query->found_posts / $post_query->query_vars['posts_per_page']); ?>)
+                        </span>
+                    </p>
+                    <div class="mt-2">
+                        <p class="text-xs text-gray-400">
+                            <?php
+                            $current_page = max(1, get_query_var('paged', 1));
+                            $total_pages = ceil($post_query->found_posts / $post_query->query_vars['posts_per_page']);
+                            if ($current_page < $total_pages) {
+                                echo "There are still " . ($total_pages - $current_page) . " more pages.";
+                            } else {
+                                echo "You have reached the last page.";
+                            }
+                            ?>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Pagination Navigation -->
+                <div>
+                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-xs" aria-label="Pagination">
+                        <?php
+                        echo paginate_links([
+                            'base'      => str_replace(99999, '%#%', esc_url(get_pagenum_link(99999))),
+                            'format'    => '?paged=%#%',
+                            'current'   => max(1, get_query_var('paged', 1)),
+                            'total'     => $post_query->max_num_pages,
+                            'prev_text' => '<span class="relative inline-flex items-center rounded-l-md px-2 py-2 text-white ring-1 ring-gray-300 ring-inset hover:bg-gray-400 focus:z-20 focus:outline-offset-0">
+                              <span class="sr-only">Previous</span>
+                              <i class="fi fi-rr-angle-small-left text-sm"></i>
+                            </span>',
+                            'next_text' => '<span class="relative inline-flex items-center rounded-r-md px-2 py-2 text-white ring-1 ring-gray-300 ring-inset hover:bg-gray-400 focus:z-20 focus:outline-offset-0">
+                              <span class="sr-only">Next</span>
+                              <i class="fi fi-rr-angle-small-right text-sm"></i>
+                            </span>',
+                            'before_page_number' => '<span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-white ring-1 ring-gray-300 ring-inset hover:bg-gray-400 focus:z-20 focus:outline-offset-0">',
+                            'after_page_number'  => '</span>',
+                            'current_class'      => 'relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
+                        ]);
+                        ?>
+                    </nav>
+                </div>
+            </div>
         </div>
 
         <!-- Tombol More Blog untuk layar kecil -->

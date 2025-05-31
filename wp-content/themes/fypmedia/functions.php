@@ -24,17 +24,17 @@ add_action('after_setup_theme', 'fypmedia_setup');
 function fypmedia_enqueue_assets()
 {
     // Load Tailwind CSS
-    wp_enqueue_style('tailwindcss', 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css', array(), '2.2.19');
+    // wp_enqueue_style('tailwindcss', 'https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css', array(), '2.2.19');
 
-    wp_enqueue_style( 'flaticon', 'https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+    wp_enqueue_style('flaticon', 'https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
 
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');    
-    
-    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), null, true );
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
 
-    wp_enqueue_script( 'scripttailwind', 'https://unpkg.com/@tailwindcss/browser@4', array(), null, true );
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), null, true);
+
+    // wp_enqueue_script( 'scripttailwind', 'https://unpkg.com/@tailwindcss/browser@4', array(), null, true );
 
     // Load Theme's Main Stylesheet
     wp_enqueue_style('theme-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
@@ -177,7 +177,7 @@ class WP_Tailwind_Navwalker extends Walker_Nav_Menu
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
         if ($depth == 0 && in_array('menu-item-has-children', $classes)) {
-            $classes[] = 'relative group';  
+            $classes[] = 'relative group';
         }
 
         $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
@@ -186,10 +186,10 @@ class WP_Tailwind_Navwalker extends Walker_Nav_Menu
         $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
         $id = $id ? ' id="' . esc_attr($id) . '"' : '';
 
-        $attributes  = ! empty($item->attr_title)     ? ' title="'   . esc_attr($item->attr_title)     . '"' : '';
-        $attributes .= ! empty($item->target)         ? ' target="'  . esc_attr($item->target)         . '"' : '';
-        $attributes .= ! empty($item->xfn)            ? ' rel="'     . esc_attr($item->xfn)            . '"' : '';
-        $attributes .= ! empty($item->url)            ? ' href="'    . esc_attr($item->url)            . '"' : '';
+        $attributes = !empty($item->attr_title) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
+        $attributes .= !empty($item->target) ? ' target="' . esc_attr($item->target) . '"' : '';
+        $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
+        $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
 
         $item_output = $args->before;
         $item_output .= '<li' . $id . $class_names . '>';

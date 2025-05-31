@@ -21,6 +21,13 @@ function fypmedia_setup()
 add_action('after_setup_theme', 'fypmedia_setup');
 
 // 2. Enqueue Styles and Scripts
+function fypmedia_enqueue_styles()
+{
+    wp_enqueue_style("tailwind-style", get_template_directory_uri() . "/assets/css/output-tailwind.css", array(), "1.0.0");
+}
+
+add_action('wp_enqueue_scripts', 'fypmedia_enqueue_styles');
+
 function fypmedia_enqueue_assets()
 {
     // Load Tailwind CSS

@@ -1,18 +1,20 @@
 {
-  "name": "fypmedia",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "autoprefixer": "^10.4.20",
-    "fypmedia": "file:",
-    "postcss": "^8.5.1",
-    "tailwindcss": "^3.4.17"
-  }
+	"name": "fypmedia",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./assets/css/output-tailwind.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@tailwindcss/cli": "^4.1.8",
+		"autoprefixer": "^10.4.20",
+		"fypmedia": "file:",
+		"postcss": "^8.5.1",
+		"tailwindcss": "^4.1.8"
+	}
 }

@@ -5,14 +5,13 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/custom.css">
 </head>
 
 <body <?php body_class(); ?>>
 
     <!-- Header Section -->
-    <nav id="navbar" class=" text-white sticky z-40 top-0 border-b-2 border-[#F1F3F4]/10 bg-primary">
+    <nav id="navbar" class="text-white sticky z-40 top-0 border-b-2 border-secondary/10 bg-primary">
         <div class="bg-white/50 w-40 h-40 rounded-full mx-auto left-0 right-0 absolute top-0 blur-[150px]"></div>
 
         <div class="container mx-auto px-4 flex justify-between items-center py-7 lg:pt-7 lg:pb-6 z-20 relative">
@@ -38,14 +37,14 @@
 
                     <div class="flex flex-col gap-y-4 mt-8 lg:mt-0 lg:flex-row lg:gap-x-9 lg:items-center">
                         <a href="<?php echo home_url('/home'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Home
                         </a>
 
                         <!-- Dropdown Menu for Services -->
                         <div class="relative dropdown-menu group">
                             <button
-                                class="flex items-center text-white text-md font-medium hover:text-red-700 cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-[#F1F3F4] lg:pb-2">
+                                class="flex items-center text-white text-md font-medium hover:text-red-700 cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-secondary lg:pb-2">
                                 Service
                                 <i class="fi fi-rr-angle-down mt-1 text-sm"></i>
                             </button>
@@ -53,19 +52,19 @@
                             <div
                                 class="hidden lg:block lg:absolute lg:top-full lg:w-48 lg:rounded-lg lg:z-10 lg:bg-white lg:overflow-hidden lg:shadow-lg lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 lg:transform lg:scale-95 lg:group-hover:scale-100">
                                 <a href="http://localhost/wordpress/fyp-media/"
-                                    class="block px-4 py-2 font-medium text-[#F1F3F4] text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                    class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                     FYP Media
                                 </a>
                                 <a href="http://localhost/wordpress/fyp-agency/"
-                                    class="block px-4 py-2 font-medium text-[#F1F3F4] text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                    class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                     FYP Agency
                                 </a>
                                 <a href="http://localhost/wordpress/fyp-management/"
-                                    class="block px-4 py-2 font-medium text-[#F1F3F4] text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                    class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                     FYP Managemenet
                                 </a>
                                 <a href="http://localhost/wordpress/fyp-mandala/"
-                                    class="block px-4 py-2 font-medium text-[#F1F3F4] text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                    class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                     FYP Mandala
                                 </a>
                             </div>
@@ -73,23 +72,23 @@
 
                         <!-- Additional Menu Items -->
                         <a href="<?php echo home_url('/talent'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Talent
                         </a>
                         <a href="<?php echo home_url('/news'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             News
                         </a>
                         <a href="<?php echo home_url('/blog'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Blog
                         </a>
                         <a href="<?php echo home_url('/career'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Career
                         </a>
                         <a href="<?php echo home_url('/contact'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-[#F1F3F4] lg:pb-2">
+                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Contact
                         </a>
                     </div>
@@ -101,7 +100,7 @@
             <!-- Contact Button (Hidden on Mobile) -->
             <div class="hidden lg:block lg:pb-2">
                 <a href="#"
-                    class="px-5 py-3 bg-[#f1f3f4] font-semibold text-[#0f1017] hover:text-white hover:bg-purple-500 group flex items-center gap-x-2 rounded-full transition-colors duration-300">
+                    class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-white hover:bg-purple-500 group flex items-center gap-x-2 rounded-full transition-colors duration-300">
                     Contact US
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#0F1017" stroke-width="1.5" stroke-linecap="round"

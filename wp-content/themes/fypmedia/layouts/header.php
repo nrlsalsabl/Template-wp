@@ -12,9 +12,9 @@
 
     <!-- Header Section -->
     <nav id="navbar" class="text-white sticky z-40 top-0 border-b-2 border-secondary/10 bg-primary">
-        <div class="bg-white/50 w-40 h-40 rounded-full mx-auto left-0 right-0 absolute top-0 blur-[150px]"></div>
+        <div class="bg-blue-400 w-40 h-40 rounded-full mx-auto left-0 right-0 absolute top-0 blur-[150px]"></div>
 
-        <div class="container mx-auto px-4 flex justify-between items-center py-7 lg:pt-7 lg:pb-6 z-20 relative">
+        <div class="container mx-auto px-4 flex justify-between items-center py-5 lg:pt-7 lg:pb-6 z-20 relative">
 
             <!-- Logo -->
             <div class="lg:pb-2">

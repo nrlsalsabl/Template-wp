@@ -47,10 +47,10 @@ include "layouts/header.php";
                 </div>
             </div>
         </div>
-    </div>
-    <div class="mt-20">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/meeting.jpg" alt="Meeting image"
-            class="w-5/6 h-96 hidden sm:block contrast-50 brightness-90 object-cover rounded-xl mx-auto">
+        <div class="mt-14 hidden lg:block">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.png" alt="Meeting image"
+                class="w-full object-cover">
+        </div>
     </div>
 </section>
 

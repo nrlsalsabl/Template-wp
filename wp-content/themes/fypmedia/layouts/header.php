@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 
     <!-- Header Section -->
-    <nav id="navbar" class="text-white sticky z-40 top-0 border-b-2 border-secondary/10 bg-primary">
+    <nav id="navbar" class="text-secondary sticky z-40 top-0 border-b-2 border-secondary/10 bg-primary">
         <div class="bg-blue-400 w-40 h-40 rounded-full mx-auto left-0 right-0 absolute top-0 blur-[150px]"></div>
 
         <div class="container mx-auto px-4 flex justify-between items-center py-5 lg:pt-7 lg:pb-6 z-20 relative">
@@ -32,19 +32,19 @@
                     id="sidebar-menu">
 
                     <button id="close-menu-button" class="w-auto ml-auto block lg:hidden">
-                        <i class="fi fi-rr-cross text-white"></i>
+                        <i class="fi fi-rr-cross text-secondary"></i>
                     </button>
 
                     <div class="flex flex-col gap-y-4 mt-8 lg:mt-0 lg:flex-row lg:gap-x-9 lg:items-center">
                         <a href="<?php echo home_url('/home'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Home
                         </a>
 
                         <!-- Dropdown Menu for Services -->
                         <div class="relative dropdown-menu group">
                             <button
-                                class="flex items-center text-white text-md font-medium hover:text-red-700 cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-secondary lg:pb-2">
+                                class="flex items-center text-secondary text-md font-medium hover:text-red-700 cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-secondary lg:pb-2">
                                 Service
                                 <i class="fi fi-rr-angle-down mt-1 text-sm"></i>
                             </button>
@@ -72,23 +72,23 @@
 
                         <!-- Additional Menu Items -->
                         <a href="<?php echo home_url('/talent'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Talent
                         </a>
                         <a href="<?php echo home_url('/news'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             News
                         </a>
                         <a href="<?php echo home_url('/blog'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Blog
                         </a>
                         <a href="<?php echo home_url('/career'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Career
                         </a>
                         <a href="<?php echo home_url('/contact'); ?>"
-                            class="text-white text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                            class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
                             Contact
                         </a>
                     </div>
@@ -100,7 +100,7 @@
             <!-- Contact Button (Hidden on Mobile) -->
             <div class="hidden lg:block lg:pb-2">
                 <a href="#"
-                    class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-white hover:bg-purple-500 group flex items-center gap-x-2 rounded-full transition-colors duration-300">
+                    class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-secondary hover:bg-purple-500 group flex items-center gap-x-2 rounded-full transition-colors duration-300">
                     Contact US
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#0F1017" stroke-width="1.5" stroke-linecap="round"
@@ -114,7 +114,7 @@
             <!-- <div class="hidden md:flex items-center ml-4">
                 <form role="search" method="get" class="flex items-center" action="<?php echo home_url('/'); ?>">
                     <input type="search" name="s" placeholder="Search..." class="px-4 py-2 rounded-l-full border-2 border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-rose-500">
-                    <button type="submit" class="px-4 py-2 bg-rose-500 text-white rounded-r-full hover:bg-rose-700 focus:outline-none">
+                    <button type="submit" class="px-4 py-2 bg-rose-500 text-secondary rounded-r-full hover:bg-rose-700 focus:outline-none">
                         <i class="fi fi-rr-search"></i>
                     </button>
                 </form>

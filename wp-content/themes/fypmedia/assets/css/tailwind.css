@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --color-primary: #0f1017;
-  --color-secondary: #f1f3f4;
-  --font-open-sans: "Open Sans", sans-serif;
+	--color-primary: #0f1017;
+	--color-secondary: #f1f3f4;
+	--color-tertiary: #47494e;
+	--font-open-sans: 'Open Sans', sans-serif;
 }

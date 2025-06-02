@@ -123,7 +123,7 @@ $services = [
                 brand kamu di platform
                 ini!</p>
             <a href="#"
-                class="flex items-center justify-center mt-12 gap-1 rounded-full font-semibold text-lg py-4 w-full btn-primary-purle lg:mt-8 lg:w-max lg:px-8">Ayo
+                class="flex items-center justify-center mt-12 gap-1 rounded-full font-semibold text-lg py-4 w-full btn-primary-purple lg:mt-8 lg:w-max lg:px-8">Ayo
                 Wujudkan Ide mu
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
@@ -136,7 +136,7 @@ $services = [
 
 <!-- Garis pemisah -->
 <div
-    class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto mt-14 lg:mt-20">
+    class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto margin-primary">
 </div>
 
 <!-- Our Services + News + Latest Blog -->
@@ -180,13 +180,13 @@ $services = [
                                 <h3 class="text-2xl font-semibold font-open-sans text-secondary"><?php echo $title; ?>
                                 </h3>
 
-                                <p class="font-medium text-secondary mt-5 line-clamp-3 grow">
+                                <p class="font-medium text-secondary mt-5 grow">
                                     Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
                                     potential with every click.
                                 </p>
 
                                 <a href="#"
-                                    class="px-5 py-3 mt-7 font-semibold  flex items-center justify-center gap-x-2 rounded-full btn-primary-purle  border-2 border-transparent lg:shrink-0">
+                                    class="px-5 py-3 mt-7 font-semibold  flex items-center justify-center gap-x-2 rounded-full btn-primary-purple  border-2 border-transparent lg:shrink-0">
                                     Get in Touch
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -210,13 +210,13 @@ $services = [
 
         <!-- Garis pemisah -->
         <div
-            class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto mt-14 lg:mt-20">
+            class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto margin-primary">
         </div>
 
         <!-- News -->
         <div class="container-primary margin-primary">
             <!-- Header Section -->
-            <div class="container flex justify-between items-center">
+            <div class="flex justify-between items-center">
                 <h2
                     class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 relative pl-5 before:block before:bg-primary-red before:w-2 before:h-full before:rounded-lg before:absolute before:left-0 lg:text-5xl">
                     News
@@ -268,7 +268,7 @@ $services = [
                                     ", "
                                 ); ?></h4> -->
                                 <a href="<?php the_permalink(); ?>"
-                                    class="font-open-sans text-xl font-semibold my-3 block text-secondary hover:text-primary-red transition-colors"><?php the_title(); ?></a>
+                                    class="font-open-sans text-xl font-semibold my-3 block text-secondary hover:text-primary-red transition-colors line-clamp-2"><?php the_title(); ?></a>
                                 <p class="text-primary-red text-xs">By <?php echo $post_author; ?> - <?php echo $post_date; ?>
                                 </p>
                             </div>
@@ -277,7 +277,7 @@ $services = [
                     endwhile;
                     wp_reset_postdata();
                 else:
-                    echo '<p class="text-center text-gray-500">No news available.</p>';
+                    echo '<p class="text-center text-secondary">No news available.</p>';
                 endif;
                 ?>
             </div>
@@ -297,134 +297,102 @@ $services = [
         </div>
     </div>
 
+    <!-- Latest Blogs -->
+    <div class="container-primary margin-primary">
+        <!-- Garis pemisah -->
+        <div class="h-1 w-full rounded-sm bg-[#47494E]"></div>
 
-
-    <!-- Latest Blog -->
-    <div class="">
-
-    </div>
-
-</section>
-
-
-
-
-
-<!-- Berita FYP lawas -->
-<section class="mt-5">
-    <div class="container mx-auto">
         <!-- Header Section -->
-        <div class="container flex justify-between items-center p-5">
-            <h1 class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-start lg:ml-14 py-5">
-                <span class="inline-block w-1 h-6 lg:w-2 sm:h-8 md:h-9 lg:h-10 bg-red-500 rounded-full mr-2"></span>
-                Latest Blog
-            </h1>
-            <!-- Tombol More News untuk layar besar -->
-            <a href="#"
-                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform transform hover:scale-105 text-center hidden md:inline-block">
-                More Blog<i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-            </a>
+        <div class="flex justify-between items-center margin-primary">
+            <h2
+                class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 relative pl-5 before:block before:bg-primary-red before:w-2 before:h-full before:rounded-lg before:absolute before:left-0 lg:text-5xl">
+                Latest Blogs
+            </h2>
+            <!-- Tombol More blog untuk layar besar -->
+            <div class="hidden lg:flex lg:justify-center">
+                <a href="#"
+                    class="border-2 border-secondary text-secondary text-xl font-semibold w-max flex items-center justify-center gap-x-2 px-8 py-4 rounded-full text-center transition-colors duration-300 hover:text-secondary hover:bg-primary-purple hover:border-transparent">
+                    More blog <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="group-hover:stroke-secondary transition-colors duration-300 lg:stroke-secondary" />
+                    </svg>
+                </a>
+            </div>
         </div>
 
-        <!-- Blog Cards Section -->
-        <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto px-4 py-5">
+        <div class="grid gap-y-12 mt-10 sm:grid-cols-2 sm:gap-11 lg:grid-cols-3 ">
             <?php
-            // Query for 'post' (default blog posts)
             $post_query = new WP_Query([
                 "post_type" => "post",
                 "posts_per_page" => 3,
             ]);
             if ($post_query->have_posts()):
                 while ($post_query->have_posts()):
-                    $post_query->the_post(); ?>
-                    <div
-                        class="flex flex-col bg-transparent rounded-lg shadow-xl overflow-hidden transition-transform transform hover:scale-105">
-                        <a href="<?php the_permalink(); ?>" class="block">
+                    $post_query->the_post();
+                    $post_author = get_the_author();
+                    $post_date = get_the_date("j F Y");
+                    ?>
+                    <article class="overflow-hidden transition-transform transform hover:scale-105">
+                        <!-- Gambar Post -->
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                             <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail("medium", [
                                     "class" =>
-                                        "w-full h-48 object-cover rounded-t-lg",
+                                        "w-full aspect-video object-cover rounded-lg",
                                 ]); ?>
+                            <?php else: ?>
                             <?php endif; ?>
                         </a>
-                        <div class="flex-grow p-5 rounded-b-lg">
-                            <h3 class="text-xs font-semibold text-blue-300 uppercase tracking-wide mb-1">FYP Media Blog</h3>
-
-                            <h2 class="text-white text-lg font-bold hover:text-red-500 transition-colors mb-3">
-                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                            </h2>
-
-                            <p class="text-white text-sm mb-3">
-                                <?php echo wp_trim_words(
-                                    get_the_excerpt(),
-                                    20,
-                                    "..."
-                                ); ?>
+                        <div class="pt-4">
+                            <div class="flex items-center gap-2">
+                                <span class="font-open-sans text-sm text-primary-blue">FYP Media</span>
+                                <span class="font-open-sans text-sm text-primary-blue">Blog</span>
+                            </div>
+                            <!-- <h4 class="font-open-sans text-xl font-semibold my-3 text-secondary"><?php the_category(
+                                ", "
+                            ); ?></h4> -->
+                            <a href="<?php the_permalink(); ?>"
+                                class="font-open-sans text-xl font-semibold my-3 block text-secondary hover:text-primary-red transition-colors line-clamp-2"><?php the_title(); ?></a>
+                            <p class="text-secondary text-sm mb-3 line-clamp-5">
+                                <?php echo
+                                    get_the_excerpt(); ?>
                             </p>
-
-                            <p class="text-red-500 text-xs">By <?php echo get_the_author(); ?> -
-                                <?php echo get_the_date("j F Y"); ?>
+                            <p class="text-primary-red text-xs">By <?php echo $post_author; ?> - <?php echo $post_date; ?>
                             </p>
                         </div>
-                    </div>
+                    </article>
                     <?php
                 endwhile;
                 wp_reset_postdata();
             else:
-                echo '<p class="text-white">No blog posts available.</p>';
+                echo '<p class="text-center text-secondary">No blog posts available.</p>';
             endif;
             ?>
         </div>
 
-        <!-- Tombol More News untuk layar kecil -->
-        <div class="flex justify-center mt-6 lg:hidden">
+        <!-- Tombol More blog untuk layar kecil -->
+        <div class="flex justify-center mt-11 lg:hidden">
             <a href="#"
-                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform transform hover:scale-105 text-center">
-                More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-<!-- Divider -->
-<div class="w-full h-px bg-gray-500 mt-4 mx-auto"></div>
-
-<!-- Contact Section -->
-<section>
-    <div class="container mx-auto">
-        <div
-            class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between text-left py-10 mt-2 px-6 lg:px-0 gap-4">
-            <h1
-                class="text-white font-semibold text-5xl md:text-4xl lg:text-5xl w-full lg:w-auto text-left lg:text-left ml-0 lg:ml-20 max-w-sm lg:max-w-xl">
-                Mau Diskusi Project Baru?
-            </h1>
-            <a href="<?php echo get_site_url() . "/about-us"; ?>"
-                class="bg-custom-purple mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition-transform duration-300 transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
-                Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
+                class="border-2 border-secondary text-secondary text-xl font-semibold w-max flex items-center justify-center gap-x-2 px-8 py-4 rounded-full text-center transition-colors duration-300 hover:text-secondary hover:bg-primary-purple hover:border-transparent">
+                More blog <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="group-hover:stroke-secondary transition-colors duration-300 lg:stroke-secondary" />
+                </svg>
             </a>
         </div>
     </div>
 
 </section>
+
+<?php include "layouts/call-to-action.php"; // Menyertakan header.php
+?>
 
 
 <?php include "layouts/footer.php"; // Menyertakan header.php
-?>
-te_url() . '/about-us'; ?>"
-class="bg-custom-purple mt-5 text-white text-sm md:text-base px-5 py-3 rounded-full transition-transform duration-300
-transform hover:scale-105 lg:mr-16 w-full lg:w-auto text-center">
-Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
-</a>
-</div>
-</div>
-
-</section>
-
-
-<?php
-include 'layouts/footer.php'; // Menyertakan header.php
 ?>
 
 <script>

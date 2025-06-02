@@ -16,7 +16,7 @@
 }
 
 @layer components {
-	.btn-primary-purle {
+	.btn-primary-purple {
 		@apply bg-primary-purple text-secondary hover:bg-primary-purple-hover duration-500 ease-in-out;
 	}
 

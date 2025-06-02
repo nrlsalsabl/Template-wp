@@ -51,15 +51,17 @@
                         <li><a href="<?php echo home_url('/home'); ?>" class="hover:underline">Home</a></li>
                         <li><a href="<?php echo home_url('/services/fyp-media'); ?>" class="hover:underline">About</a>
                         </li>
+                        <li><a href="<?php echo home_url('/services/fyp-agency'); ?>"
+                                class="hover:underline">Service</a></li>
                         <li><a href="<?php echo home_url('/news'); ?>" class="hover:underline">News</a></li>
-                        <li><a href="<?php echo home_url('/blog'); ?>" class="hover:underline">Blog</a></li>
+
                     </ul>
 
                     <ul class="font-semibold space-y-2">
+                        <li><a href="<?php echo home_url('/blog'); ?>" class="hover:underline">Blog</a></li>
                         <li><a href="<?php echo home_url('/careers'); ?>" class="hover:underline">Careers</a></li>
                         <li><a href="<?php echo home_url('/contact'); ?>" class="hover:underline">Contact</a></li>
-                        <li><a href="<?php echo home_url('/services/fyp-agency'); ?>"
-                                class="hover:underline">Service</a></li>
+
                     </ul>
                 </div>
             </div>

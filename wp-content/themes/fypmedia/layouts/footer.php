@@ -87,7 +87,7 @@
     </footer>
 
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/a329084b4e.js" crossorigin="anonymous"></script>
 

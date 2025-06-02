@@ -103,7 +103,7 @@ $services = [
     </div>
     <!-- end -->
 
-    <div class="container mx-auto mt-11 mb-16 px-4 flex flex-col lg:flex-row lg:justify-between lg:gap-10 lg:my-20">
+    <div class="container mx-auto mt-11 px-4 flex flex-col lg:flex-row lg:justify-between lg:gap-10 lg:mt-20">
         <!-- Bagian Teks -->
         <h2
             class="text-3xl font-open-sans sm:text-4xl lg:text-5xl font-semibold text-secondary leading-snug lg:max-w-[604px]">
@@ -136,160 +136,171 @@ $services = [
 
 <!-- Garis pemisah -->
 <div
-    class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto">
+    class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto mt-14 lg:mt-20">
 </div>
 
-
 <!-- Our Services + News + Latest Blog -->
-<section class="mt-14 flex flex-col gap-y-14 lg:gap-y-20 lg:mt-20">
-    <!-- Our Services -->
-    <div class="px-4 container mx-auto">
-        <div class="lg:flex lg:items-center lg:justify-between lg:gap-10 lg:relative">
-            <h2 class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 lg:text-5xl">
-                Our Services <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg" class="lg:w-12 lg:h-12">
-                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-            </h2>
+<section>
+    <div class="flex flex-col lg:flex-col-reverse">
+        <!-- Our Services -->
+        <div class="container mx-auto px-4 mt-14 lg:mt-20">
+            <div class="lg:flex lg:items-center lg:justify-between lg:gap-10 lg:relative">
+                <h2 class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 lg:text-5xl">
+                    Our Services <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" class="lg:w-12 lg:h-12">
+                        <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </h2>
 
-            <!-- Tombol Navigasi -->
-            <div class="hidden lg:flex lg:gap-5">
-                <div
-                    class="swiper-button-prev flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
-                    <i
-                        class="fi fi-rr-angle-small-left text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
+                <!-- Tombol Navigasi -->
+                <div class="hidden lg:flex lg:gap-5">
+                    <div
+                        class="swiper-button-prev flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
+                        <i
+                            class="fi fi-rr-angle-small-left text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
+                    </div>
+
+                    <div
+                        class="swiper-button-next flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
+                        <i
+                            class="fi fi-rr-angle-small-right text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-cards relative overflow-hidden mt-6 lg:mt-10">
+                <div class="swiper-wrapper">
+                    <?php foreach ($services as $title): ?>
+                        <div class="swiper-slide bg-card-services border-2 rounded-3xl border-secondary/40 overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out
+                   flex flex-col"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="
+                                <?php echo esc_attr($title); ?>" class="w-full h-48 object-cover">
+
+                            <div class="px-4 py-7 flex flex-col grow">
+                                <h3 class="text-2xl font-semibold font-open-sans text-secondary"><?php echo $title; ?>
+                                </h3>
+
+                                <p class="font-medium text-secondary mt-5 line-clamp-3 grow">
+                                    Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
+                                    potential with every click.
+                                </p>
+
+                                <a href="#"
+                                    class="px-5 py-3 mt-7 font-semibold  flex items-center justify-center gap-x-2 rounded-full btn-primary-purle  border-2 border-transparent lg:shrink-0">
+                                    Get in Touch
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4 " stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
 
-                <div
-                    class="swiper-button-next flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
-                    <i
-                        class="fi fi-rr-angle-small-right text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
-                </div>
+                <style>
+                    .swiper-button-next::after,
+                    .swiper-button-prev::after {
+                        display: none;
+                    }
+                </style>
             </div>
         </div>
 
-        <div class="swiper-cards relative overflow-hidden mt-6 lg:mt-10">
-            <div class="swiper-wrapper">
-                <?php foreach ($services as $title): ?>
-                    <div class="swiper-slide bg-card-services border-2 rounded-3xl border-secondary/40 overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out
-           flex flex-col"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="
-                        <?php echo esc_attr($title); ?>" class="w-full h-48 object-cover">
+        <!-- Garis pemisah -->
+        <div
+            class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto mt-14 lg:mt-20">
+        </div>
 
-                        <div class="px-4 py-7 flex flex-col grow">
-                            <h3 class="text-2xl font-semibold font-open-sans text-secondary"><?php echo $title; ?>
-                            </h3>
-
-                            <p class="font-medium text-secondary mt-5 line-clamp-3 grow">
-                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
-                                potential with every click.
-                            </p>
-
-                            <a href="#"
-                                class="px-5 py-3 mt-7 font-semibold  flex items-center justify-center gap-x-2 rounded-full btn-primary-purle  border-2 border-transparent lg:shrink-0">
-                                Get in Touch
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4 " stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+        <!-- News -->
+        <div class="container mx-auto px-4 mt-14 lg:mt-20">
+            <!-- Header Section -->
+            <div class="container flex justify-between items-center">
+                <h2
+                    class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 relative pl-5 before:block before:bg-primary-red before:w-2 before:h-full before:rounded-lg before:absolute before:left-0 lg:text-5xl">
+                    News
+                </h2>
+                <!-- Tombol More News untuk layar besar -->
+                <div class="hidden lg:flex lg:justify-center">
+                    <a href="#"
+                        class="border-2 border-secondary text-secondary text-xl font-semibold w-max flex items-center justify-center gap-x-2 px-8 py-4 rounded-full text-center transition-colors duration-300 hover:text-secondary hover:bg-primary-purple hover:border-transparent">
+                        More news <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="group-hover:stroke-secondary transition-colors duration-300 lg:stroke-secondary" />
+                        </svg>
+                    </a>
+                </div>
             </div>
 
-            <style>
-                .swiper-button-next::after,
-                .swiper-button-prev::after {
-                    display: none;
-                }
-            </style>
+            <div class="grid gap-y-12 mt-10 sm:grid-cols-2 sm:gap-11 lg:grid-cols-3 ">
+                <?php
+                $news_query = new WP_Query([
+                    "post_type" => "news",
+                    "posts_per_page" => 3,
+                ]);
+                if ($news_query->have_posts()):
+                    while ($news_query->have_posts()):
+
+                        $news_query->the_post();
+                        $post_author = get_the_author();
+                        $post_date = get_the_date("j F Y");
+                        ?>
+                        <article class="overflow-hidden transition-transform transform hover:scale-105">
+                            <!-- Gambar Post -->
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                                <?php if (has_post_thumbnail()): ?>
+                                    <?php the_post_thumbnail("medium", [
+                                        "class" =>
+                                            "w-full aspect-video object-cover rounded-lg",
+                                    ]); ?>
+                                <?php else: ?>
+                                <?php endif; ?>
+                            </a>
+                            <div class="pt-4">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-open-sans text-sm text-primary-blue">FYP Media</span>
+                                    <span class="font-open-sans text-sm text-primary-blue">News</span>
+                                </div>
+                                <!-- <h4 class="font-open-sans text-xl font-semibold my-3 text-secondary"><?php the_category(
+                                    ", "
+                                ); ?></h4> -->
+                                <a href="<?php the_permalink(); ?>"
+                                    class="font-open-sans text-xl font-semibold my-3 block text-secondary hover:text-primary-red transition-colors"><?php the_title(); ?></a>
+                                <p class="text-primary-red text-xs">By <?php echo $post_author; ?> - <?php echo $post_date; ?>
+                                </p>
+                            </div>
+                        </article>
+                        <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else:
+                    echo '<p class="text-center text-gray-500">No news available.</p>';
+                endif;
+                ?>
+            </div>
+
+            <!-- Tombol More News untuk layar kecil -->
+            <div class="flex justify-center mt-11 lg:hidden">
+                <a href="#"
+                    class="border-2 border-secondary text-secondary text-xl font-semibold w-max flex items-center justify-center gap-x-2 px-8 py-4 rounded-full text-center transition-colors duration-300 hover:text-secondary hover:bg-primary-purple hover:border-transparent">
+                    More news <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="group-hover:stroke-secondary transition-colors duration-300 lg:stroke-secondary" />
+                    </svg>
+                </a>
+            </div>
         </div>
     </div>
-
-    <!-- News -->
 
     <!-- Latest Blog -->
-</section>
-
-<!-- Service -->
-
-
-<section class="mt-5">
-    <div class="container mx-auto">
-        <!-- Header Section -->
-        <div class="container flex justify-between items-center p-5">
-            <h1 class="text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-start lg:ml-14 py-5">
-                <span class="inline-block w-1 h-6 lg:w-2 sm:h-8 md:h-9 lg:h-10 bg-red-500 rounded-full mr-2"></span>
-                News
-            </h1>
-            <!-- Tombol More News untuk layar besar -->
-            <a href="#"
-                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full mr-16 transition-transform transform hover:scale-105 text-center hidden md:inline-block">
-                More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-            </a>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 max-w-6xl mx-auto px-4 sm:px-6 lg:8 mt-5">
-            <?php
-            $news_query = new WP_Query([
-                "post_type" => "news",
-                "posts_per_page" => 3,
-            ]);
-            if ($news_query->have_posts()):
-                while ($news_query->have_posts()):
-
-                    $news_query->the_post();
-                    $post_author = get_the_author();
-                    $post_date = get_the_date("j F Y");
-                    ?>
-                    <div
-                        class="flex flex-col bg-transparent rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
-                        <!-- Gambar Post -->
-                        <a href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()): ?>
-                                <?php the_post_thumbnail("medium", [
-                                    "class" =>
-                                        "w-full h-48 object-cover rounded-lg",
-                                ]); ?>
-                            <?php else: ?>
-                            <?php endif; ?>
-                        </a>
-                        <div class="flex-grow p-2">
-                            <h3 class="text-xs font-semibold text-blue-300 uppercase tracking-wide mb-1">FYP Media News</h3>
-                            <h3 class="text-sm font-semibold mb-2 text-white"><?php the_category(
-                                ", "
-                            ); ?></h3>
-                            <p class="text-white text-xl mb-4">
-                                <a href="<?php the_permalink(); ?>"
-                                    class="hover:text-red-500 transition-colors"><?php the_title(); ?></a>
-                            </p>
-                            <p class="text-red-500 text-xs">By <?php echo $post_author; ?> - <?php echo $post_date; ?></p>
-                        </div>
-                    </div>
-                    <?php
-                endwhile;
-                wp_reset_postdata();
-            else:
-                echo '<p class="text-center text-gray-500">No news available.</p>';
-            endif;
-            ?>
-        </div>
-
-        <!-- Tombol More News untuk layar kecil -->
-        <div class="flex justify-center mt-6 order-3 lg:hidden">
-            <a href="#"
-                class="bg-transparent border border-white text-white text-sm px-5 py-3 rounded-full transition-transform transform hover:scale-105 text-center">
-                More news <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-            </a>
-        </div>
-    </div>
 
 </section>
 
-<!-- Garis pemisah -->
-<div class="w-full h-0.5 bg-gradient-to-r from-black via-primary-purple to-black mt-4 mx-auto"></div>
 
 <!-- Garis pemisah yang lebih tipis dan tidak full -->
 <div class="w-11/12 h-px bg-gray-500 mt-20 mx-auto"></div>

@@ -3720,6 +3720,15 @@
       }
     }
   }
+  .lg\:hover\:bg-primary-purple {
+    @media (width >= 64rem) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-primary-purple);
+        }
+      }
+    }
+  }
   .lg\:hover\:bg-rose-500 {
     @media (width >= 64rem) {
       &:hover {

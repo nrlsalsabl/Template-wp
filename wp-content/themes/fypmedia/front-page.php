@@ -20,7 +20,7 @@ include "layouts/header.php";
                 </span>
             </h1>
             <div class="space-y-4 lg:flex lg:flex-row-reverse lg:justify-between">
-                <p class="text-secondary sm:text-base lg:max-w-96">
+                <p class="text-secondary sm:text-lg lg:max-w-96">
                     Hubungkan bakatmu dengan dunia dan dapatkan berita terkini. Semua ada di FYP Media.
                 </p>
                 <div class="flex flex-col gap-4 lg:flex-row lg:self-center">

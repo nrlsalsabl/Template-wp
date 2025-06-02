@@ -156,7 +156,9 @@ include "layouts/header.php";
 </section>
 
 <!-- Garis pemisah -->
-<div class="w-full h-0.5 bg-gradient-to-r from-black via-purple-500 to-black mt-4 mx-auto"></div>
+<div
+    class="w-full h-1 bg-gradient-to-r from-purple-500/0 from-5% via-purple-500 via-50 to-purple-500/0 to-95 rounded-sm mx-auto">
+</div>
 
 <section class="mt-5">
     <div class="container mx-auto">

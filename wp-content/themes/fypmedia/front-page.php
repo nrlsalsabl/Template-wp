@@ -55,7 +55,7 @@ include "layouts/header.php";
 </section>
 
 <!-- Swiper Autoplay (Brand) -->
-<section class="mt-16 lg:mt-20">
+<section class="relative mt-16 lg:mt-20">
     <div class="bg-secondary/10 py-5">
         <div class="container mx-auto px-4">
             <!-- Swiper -->
@@ -104,10 +104,15 @@ include "layouts/header.php";
             });
         });
     </script>
+
+
+    <div class="absolute w-96 h-96 rounded-full top-5 -left-56 opacity-30 blur-[150px] md:hidden"
+        style="background: linear-gradient(45deg, #2CADFE, #F03A5D);">
+    </div>
 </section>
 
 
-<section class="mt-16 lg:mt-20">
+<section class="relative mt-16 lg:mt-20">
     <!-- garis -->
     <div class="flex items-center justify-center">
         <div class="w-full h-1 bg-tertiary rounded-sm"></div>
@@ -119,29 +124,32 @@ include "layouts/header.php";
     </div>
     <!-- end -->
 
-    <div class="container mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-left justify-between">
+    <div class="container mx-auto mt-11 mb-16 px-4 flex flex-col lg:flex-row lg:justify-between lg:gap-10 lg:my-20">
         <!-- Bagian Teks -->
-        <div class="sm:text-left md:text-left lg:text-left lg:w-2/5 lg:ml-12">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight">
-                Dengan Pengalaman Lebih Dari <span
-                    class="text-transparent bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text leading-tight">5+
-                    Tahun </span>&
-                Berpartner > <span
-                    class="text-transparent bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text leading-tight">5000
-                    Talents</span>
-            </h2>
-        </div>
+        <h2
+            class="text-3xl font-open-sans sm:text-4xl lg:text-5xl font-semibold text-secondary leading-snug lg:max-w-[604px]">
+
+            Dengan Pengalaman Lebih Dari <span
+                class="text-transparent [background-image:linear-gradient(45deg,_#BC49F9,_#06D8FB)] bg-clip-text">5+
+                Tahun </span>&
+            Berpartner Lebih Dari <span
+                class="text-transparent [background-image:linear-gradient(45deg,_#BC49F9,_#06D8FB)] bg-clip-text">500
+                Talents</span>
+        </h2>
 
 
         <!-- Bagian Paragraf dan Tombol -->
-        <div class="lg:w-1/3 flex flex-col items-center lg:items-start space-y-5 mt-6 lg:mt-0">
-            <p class="text-white sm:text-md md:text-md lg:text-lg text-left">
-                Siap bantu bikin konten keren dan naikin pamor brand kamu di platform ini!
-            </p>
+        <div class="mt-8 lg:mt-0 lg:max-w-96">
+            <p class="text-secondary font-medium sm:text-lg lg:text-xl">Siap bantu bikin konten keren dan naikin pamor
+                brand kamu di platform
+                ini!</p>
             <a href="#"
-                class="hover:bg-purple-500 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 mt-5 text-white text-sm md:text-base px-8 lg:px-8 py-3 rounded-full transition-transform transform hover:scale-105 w-full lg:w-auto text-center">
-                Contact Us Now <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
-            </a>
+                class="flex items-center justify-center mt-12 gap-1 bg-primary-bg text-white rounded-full font-semibold text-lg py-4 w-full hover:translate-x-5 ease-in-out duration-500 lg:mt-8 lg:w-max lg:px-8">Ayo
+                Wujudkan Ide mu
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" class="group-hover:stroke-white transition-colors duration-300" />
+                </svg></a>
 
         </div>
     </div>

@@ -19,4 +19,12 @@
 	.btn-primary-purle {
 		@apply bg-primary-purple text-secondary hover:bg-primary-purple-hover duration-500 ease-in-out;
 	}
+
+	.container-primary {
+		@apply container mx-auto px-4;
+	}
+
+	.margin-primary {
+		@apply mt-14 lg:mt-20;
+	}
 }

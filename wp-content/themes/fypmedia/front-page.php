@@ -11,11 +11,11 @@ $services = [
 ?>
 <!-- Hero Section -->
 <section>
-    <div class="container mx-auto px-4 mt-10 sm:mt-14 md:mt-20">
+    <div class="container-primary mt-10 sm:mt-14 md:mt-20">
         <!-- Teks Hero -->
         <div class="flex flex-col gap-y-4 lg:gap-y-8">
             <h1
-                class="text-4xl font-bold text-secondary font-open-sans sm:text-5xl sm:leading-snug md:text-6xl lg:text-7xl xl:text-[104px]">
+                class="text-4xl font-bold text-secondary font-open-sans sm:text-5xl sm:leading-snug md:text-6xl lg:text-7xl xl:text-[110px]">
                 Solusi
                 Inovatif
                 Untuk
@@ -103,7 +103,7 @@ $services = [
     </div>
     <!-- end -->
 
-    <div class="container mx-auto mt-11 px-4 flex flex-col lg:flex-row lg:justify-between lg:gap-10 lg:mt-20">
+    <div class="container-primary mt-11 flex flex-col lg:flex-row lg:justify-between lg:gap-10 lg:mt-20">
         <!-- Bagian Teks -->
         <h2
             class="text-3xl font-open-sans sm:text-4xl lg:text-5xl font-semibold text-secondary leading-snug lg:max-w-[604px]">
@@ -143,7 +143,7 @@ $services = [
 <section>
     <div class="flex flex-col lg:flex-col-reverse">
         <!-- Our Services -->
-        <div class="container mx-auto px-4 mt-14 lg:mt-20">
+        <div class="container-primary margin-primary">
             <div class="lg:flex lg:items-center lg:justify-between lg:gap-10 lg:relative">
                 <h2 class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 lg:text-5xl">
                     Our Services <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
@@ -214,7 +214,7 @@ $services = [
         </div>
 
         <!-- News -->
-        <div class="container mx-auto px-4 mt-14 lg:mt-20">
+        <div class="container-primary margin-primary">
             <!-- Header Section -->
             <div class="container flex justify-between items-center">
                 <h2
@@ -297,13 +297,17 @@ $services = [
         </div>
     </div>
 
+
+
     <!-- Latest Blog -->
+    <div class="">
+
+    </div>
 
 </section>
 
 
-<!-- Garis pemisah yang lebih tipis dan tidak full -->
-<div class="w-11/12 h-px bg-gray-500 mt-20 mx-auto"></div>
+
 
 
 <!-- Berita FYP lawas -->

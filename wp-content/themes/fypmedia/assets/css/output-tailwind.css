@@ -2036,6 +2036,13 @@
       }
     }
   }
+  .hover\:text-primary-purple {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-primary-purple);
+      }
+    }
+  }
   .hover\:text-primary-red {
     &:hover {
       @media (hover: hover) {

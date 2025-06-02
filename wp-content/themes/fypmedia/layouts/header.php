@@ -25,14 +25,14 @@
 
                 <div class="flex flex-col gap-y-4 mt-8 lg:mt-0 lg:flex-row lg:gap-x-9 lg:items-center">
                     <a href="<?php echo home_url('/home'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         Home
                     </a>
 
                     <!-- Dropdown Menu for Services -->
                     <div class="relative dropdown-menu group">
                         <button
-                            class="flex items-center text-secondary text-md font-medium hover:text-red-700 cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-secondary lg:pb-2">
+                            class="flex items-center text-secondary text-md font-medium hover:text-primary-purple cursor-pointer transition-all duration-300 justify-between w-full gap-x-2 lg:text-secondary lg:pb-2">
                             Service
                             <i class="fi fi-rr-angle-down mt-1 text-sm"></i>
                         </button>
@@ -40,19 +40,19 @@
                         <div
                             class="hidden lg:block lg:absolute lg:top-full lg:w-48 lg:rounded-lg lg:z-10 lg:bg-white lg:overflow-hidden lg:shadow-lg lg:opacity-0 lg:invisible lg:group-hover:opacity-100 lg:group-hover:visible lg:transition-all lg:duration-300 lg:transform lg:scale-95 lg:group-hover:scale-100">
                             <a href="http://localhost/wordpress/fyp-media/"
-                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-primary-purple transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                 FYP Media
                             </a>
                             <a href="http://localhost/wordpress/fyp-agency/"
-                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-primary-purple transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                 FYP Agency
                             </a>
                             <a href="http://localhost/wordpress/fyp-management/"
-                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-primary-purple transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                 FYP Managemenet
                             </a>
                             <a href="http://localhost/wordpress/fyp-mandala/"
-                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-red-700 transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
+                                class="block px-4 py-2 font-medium text-secondary text-sm hover:text-primary-purple transition-colors duration-200 lg:text-gray-700 lg:hover:text-white lg:px-4 lg:py-2 lg:hover:bg-rose-500">
                                 FYP Mandala
                             </a>
                         </div>
@@ -60,23 +60,23 @@
 
                     <!-- Additional Menu Items -->
                     <a href="<?php echo home_url('/talent'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         Talent
                     </a>
                     <a href="<?php echo home_url('/news'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         News
                     </a>
                     <a href="<?php echo home_url('/blog'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         Blog
                     </a>
                     <a href="<?php echo home_url('/career'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         Career
                     </a>
                     <a href="<?php echo home_url('/contact'); ?>"
-                        class="text-secondary text-md font-medium hover:text-red-700 transition-all duration-300 lg:text-secondary lg:pb-2">
+                        class="text-secondary text-md font-medium hover:text-primary-purple transition-all duration-300 lg:text-secondary lg:pb-2">
                         Contact
                     </a>
                 </div>

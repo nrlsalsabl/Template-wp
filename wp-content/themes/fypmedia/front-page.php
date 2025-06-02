@@ -56,20 +56,18 @@ include "layouts/header.php";
 
 <!-- Swiper Autoplay (Brand) -->
 <section class="mt-20">
-    <div class="bg-gray-600 py-5">
-        <div class="max-w-6xl mx-auto px-6 md:px-6 lg:px-8">
+    <div class="bg-secondary/[0.08] py-5">
+        <div class="container mx-auto px-4">
             <!-- Swiper -->
-            <div class="swiper-container autoplay-swiper overflow-hidden w-full">
-                <div class="swiper-wrapper justify-left">
+            <div class="swiper autoplay-swiper overflow-hidden w-full">
+                <div class="swiper-wrapper ">
                     <?php for ($i = 1; $i <= 19; $i++):
                         $image_path =
                             get_template_directory_uri() .
                             "/assets/images/{$i}.png"; ?>
-                        <div class="swiper-slide flex">
-                            <img src="<?php echo esc_url(
-                                $image_path
-                            ); ?>" alt="Image <?php echo $i; ?>"
-                                class="h-10 sm:h-12 lg:h-16 object-contain hover:scale-110 transition-transform duration-300" />
+                        <div class="swiper-slide">
+                            <img src="<?php echo esc_url($image_path); ?>" alt="Image <?php echo $i; ?>"
+                                class="h-10 sm:h-12 lg:h-16 object-contain" />
                         </div>
                         <?php
                     endfor; ?>

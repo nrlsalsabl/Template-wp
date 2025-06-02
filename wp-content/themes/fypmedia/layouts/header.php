@@ -100,11 +100,12 @@
             <!-- Contact Button (Hidden on Mobile) -->
             <div class="hidden lg:block lg:pb-2">
                 <a href="#"
-                    class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-secondary hover:bg-purple-500 group flex items-center gap-x-2 rounded-full transition-colors duration-300">
+                    class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-secondary hover:bg-primary-purple group flex items-center gap-x-2 rounded-full transition-colors duration-300">
                     Contact US
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#0F1017" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" class="group-hover:stroke-white transition-colors duration-300" />
+                            stroke-linejoin="round"
+                            class="group-hover:stroke-secondary transition-colors duration-300" />
                     </svg>
 
                 </a>
@@ -145,10 +146,6 @@
 //     'walker' => new WP_Tailwind_Navwalker(),  // Optional, jika ingin menggunakan class khusus untuk dropdown
 // ));
 ?>
-
-<style>
-
-</style>
 
 <script>
     // Mobile Menu Toggle

@@ -55,8 +55,8 @@ include "layouts/header.php";
 </section>
 
 <!-- Swiper Autoplay (Brand) -->
-<section class="mt-20">
-    <div class="bg-secondary/[0.08] py-5">
+<section class="mt-16 lg:mt-20">
+    <div class="bg-secondary/10 py-5">
         <div class="container mx-auto px-4">
             <!-- Swiper -->
             <div class="swiper autoplay-swiper overflow-hidden w-full">
@@ -107,14 +107,15 @@ include "layouts/header.php";
 </section>
 
 
-<section class="mt-20">
+<section class="mt-16 lg:mt-20">
     <!-- garis -->
-    <div class="flex items-center justify-center my-4">
-        <div class="flex-grow border-t-2 border-gray-500"></div>
-        <span class="mx-4 text-lg font-semibold text-white">
+    <div class="flex items-center justify-center">
+        <div class="w-full h-1 bg-tertiary rounded-sm"></div>
+        <p
+            class="mx-5 text-lg font-semibold text-secondary shrink-0 font-open-sans sm:text-xl sm:mx-10 md:text-2xl lg:text-3xl">
             Kenapa Memilih Kami?
-        </span>
-        <div class="flex-grow border-t-2 border-gray-500"></div>
+        </p>
+        <div class="w-full h-1 bg-tertiary rounded-sm"></div>
     </div>
     <!-- end -->
 

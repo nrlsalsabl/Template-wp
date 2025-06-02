@@ -1,6 +1,13 @@
 <?php
-include "layouts/header.php";
 // Menyertakan header.php
+include "layouts/header.php";
+
+$services = [
+    'FYP Agency',
+    'FYP Management',
+    'FYP Mandala',
+    'FYP Media'
+];
 ?>
 <!-- Hero Section -->
 <section>
@@ -25,7 +32,7 @@ include "layouts/header.php";
                 </p>
                 <div class="flex flex-col gap-4 lg:flex-row lg:self-center">
                     <a href="#"
-                        class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-secondary hover:bg-purple-500 group flex items-center justify-center gap-x-2 rounded-full transition-colors duration-300 border-2 border-transparent lg:shrink-0">Get
+                        class="px-5 py-3 bg-secondary font-semibold text-primary hover:text-secondary hover:bg-primary-purple group flex items-center justify-center gap-x-2 rounded-full transition-colors duration-300 border-2 border-transparent lg:shrink-0">Get
                         in Touch
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#0F1017" stroke-width="1.5"
@@ -35,7 +42,7 @@ include "layouts/header.php";
 
                     </a>
                     <a href="#"
-                        class="px-5 py-3 font-semibold text-secondary  group flex items-center justify-center gap-x-2 rounded-full transition-colors duration-300 border-2 border-secondary hover:text-secondary hover:bg-purple-500 hover:border-transparent lg:shrink-0">Read
+                        class="px-5 py-3 font-semibold text-secondary  group flex items-center justify-center gap-x-2 rounded-full transition-colors duration-300 border-2 border-secondary hover:text-secondary hover:bg-primary-purple hover:border-transparent lg:shrink-0">Read
                         News here
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5"
@@ -75,35 +82,7 @@ include "layouts/header.php";
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Inisialisasi Swiper setelah DOM selesai dimuat
-            const autoplayswiper = new Swiper('.autoplay-swiper', {
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                slidesPerView: 2,
-                spaceBetween: 2,
-                centeredSlides: false,
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 7,
-                        spaceBetween: 2
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 4
-                    },
-                    360: {
-                        slidesPerView: 4,
-                        spaceBetween: 4
-                    },
-                },
-            });
-        });
-    </script>
+
 
 
     <div class="absolute w-96 h-96 rounded-full top-5 -left-56 opacity-30 blur-[150px] md:hidden"
@@ -144,7 +123,7 @@ include "layouts/header.php";
                 brand kamu di platform
                 ini!</p>
             <a href="#"
-                class="flex items-center justify-center mt-12 gap-1 bg-primary-bg text-white rounded-full font-semibold text-lg py-4 w-full hover:translate-x-5 ease-in-out duration-500 lg:mt-8 lg:w-max lg:px-8">Ayo
+                class="flex items-center justify-center mt-12 gap-1 rounded-full font-semibold text-lg py-4 w-full btn-primary-purle lg:mt-8 lg:w-max lg:px-8">Ayo
                 Wujudkan Ide mu
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
@@ -157,8 +136,85 @@ include "layouts/header.php";
 
 <!-- Garis pemisah -->
 <div
-    class="w-full h-1 bg-gradient-to-r from-purple-500/0 from-5% via-purple-500 via-50 to-purple-500/0 to-95 rounded-sm mx-auto">
+    class="w-full h-1 bg-gradient-to-r from-primary-purple/0 from-5% via-primary-purple via-50 to-primary-purple/0 to-95 rounded-sm mx-auto">
 </div>
+
+
+<!-- Our Services + News + Latest Blog -->
+<section class="mt-14 flex flex-col gap-y-14 lg:gap-y-20 lg:mt-20">
+    <!-- Our Services -->
+    <div class="px-4 container mx-auto">
+        <div class="lg:flex lg:items-center lg:justify-between lg:gap-10 lg:relative">
+            <h2 class="text-secondary font-open-sans font-bold text-3xl flex items-center gap-2 lg:text-5xl">
+                Our Services <svg width="36" height="36" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" class="lg:w-12 lg:h-12">
+                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </h2>
+
+            <!-- Tombol Navigasi -->
+            <div class="hidden lg:flex lg:gap-5">
+                <div
+                    class="swiper-button-prev flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
+                    <i
+                        class="fi fi-rr-angle-small-left text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
+                </div>
+
+                <div
+                    class="swiper-button-next flex items-center justify-center !static !w-14 !h-14 rounded-full border border-secondary hover:opacity-70 duration-200 ease-in-out">
+                    <i
+                        class="fi fi-rr-angle-small-right text-secondary text-4xl w-10 h-10 flex items-center justify-center"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-cards relative overflow-hidden mt-6 lg:mt-10">
+            <div class="swiper-wrapper">
+                <?php foreach ($services as $title): ?>
+                    <div class="swiper-slide bg-card-services border-2 rounded-3xl border-secondary/40 overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out
+           flex flex-col"> <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="
+                        <?php echo esc_attr($title); ?>" class="w-full h-48 object-cover">
+
+                        <div class="px-4 py-7 flex flex-col grow">
+                            <h3 class="text-2xl font-semibold font-open-sans text-secondary"><?php echo $title; ?>
+                            </h3>
+
+                            <p class="font-medium text-secondary mt-5 line-clamp-3 grow">
+                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
+                                potential with every click.
+                            </p>
+
+                            <a href="#"
+                                class="px-5 py-3 mt-7 font-semibold  flex items-center justify-center gap-x-2 rounded-full btn-primary-purle  border-2 border-transparent lg:shrink-0">
+                                Get in Touch
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#f1f3f4 " stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <style>
+                .swiper-button-next::after,
+                .swiper-button-prev::after {
+                    display: none;
+                }
+            </style>
+        </div>
+    </div>
+
+    <!-- News -->
+
+    <!-- Latest Blog -->
+</section>
+
+<!-- Service -->
+
 
 <section class="mt-5">
     <div class="container mx-auto">
@@ -233,152 +289,7 @@ include "layouts/header.php";
 </section>
 
 <!-- Garis pemisah -->
-<div class="w-full h-0.5 bg-gradient-to-r from-black via-purple-500 to-black mt-4 mx-auto"></div>
-
-<!-- Service -->
-<section class="mt-5">
-    <div class="container mx-auto p-5">
-        <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-semibold text-start lg:ml-14">
-            Our Service <i
-                class="fi fi-rr-arrow-up-right text-white text-2xl sm:text-2xl md:text-3xl lg:text-3xl ml-3"></i>
-        </h1>
-
-    </div>
-    <div class="py-4">
-        <div class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-            <!-- Swiper -->
-            <div class="swiper-container swiper-cards relative overflow-hidden">
-                <div class="swiper-wrapper">
-                    <!-- Card 1 -->
-                    <div
-                        class="swiper-slide bg-gray-900 shadow-lg border rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="Card 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold text-white">FYP Agency</h3>
-                            <p class="text-sm text-white mt-2">
-                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
-                                potential with every click.
-                            </p>
-                            <div class="flex justify-center mt-4">
-                                <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
-                                    Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide bg-gray-900 shadow-lg border rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="Card 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold text-white">FYP Management</h3>
-                            <p class="text-sm text-white mt-2">
-                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
-                                potential with every click.
-                            </p>
-                            <div class="flex justify-center mt-4">
-                                <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
-                                    Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide bg-gray-900 shadow-lg border rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="Card 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold text-white">FYP Mandala</h3>
-                            <p class="text-sm text-white mt-2">
-                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
-                                potential with every click.
-                            </p>
-                            <div class="flex justify-center mt-4">
-                                <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform duration-300 transform hover:scale-105 whitespace-nowrap">
-                                    Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="swiper-slide bg-gray-900 shadow-lg border rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ease-in-out">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/image.png" alt="Card 1"
-                            class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-bold text-white">FYP Media</h3>
-                            <p class="text-sm text-white mt-2">
-                                Crafting digital experience where beauty meets ROI, turning heads and unlocking revenue
-                                potential with every click.
-                            </p>
-                            <div class="flex justify-center mt-4">
-                                <a href="#"
-                                    class="inline-block text-center px-3 py-2 sm:px-10 sm:py-2 lg:px-10 lg:py-3 sm:text-sm lg:text-md bg-custom-purple text-white font-medium rounded-full transition-transform transform hover:scale-105 whitespace-nowrap">
-                                    Get in Touch <i class="fi fi-rr-arrow-up-right text-white text-sm ml-3"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tombol Navigasi -->
-                <div class="swiper-button-next flex items-center justify-center">
-                    <i
-                        class="fi fi-rr-angle-small-right bg-white rounded-full text-black transition-transform duration-300 transform hover:scale-105 text-4xl w-8 h-8 flex items-center justify-center"></i>
-                </div>
-                <div class="swiper-button-prev flex items-center justify-center">
-                    <i
-                        class="fi fi-rr-angle-small-left bg-white rounded-full text-black transition-transform duration-300 transform hover:scale-105 text-4xl w-8 h-8 flex items-center justify-center"></i>
-                </div>
-
-
-                <style>
-                    /* Mengatasi tampilan default Swiper */
-                    .swiper-button-next::after,
-                    .swiper-button-prev::after {
-                        display: none;
-                    }
-                </style>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Swiper card
-            const cardSwiper = new Swiper('.swiper-cards', {
-                loop: true, // Mengaktifkan loop
-                slidesPerView: 3, // Menampilkan 3 card sekaligus
-                spaceBetween: 20, // Jarak antar card
-                navigation: {
-                    nextEl: '.swiper-button-next', // Tombol untuk navigasi ke slide berikutnya
-                    prevEl: '.swiper-button-prev', // Tombol untuk navigasi ke slide sebelumnya
-                },
-                cssMode: true,
-
-                breakpoints: {
-                    1024: {
-                        slidesPerView: 3,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                    },
-                    640: {
-                        slidesPerView: 1,
-                    },
-                    390: {
-                        slidesPerView: 1,
-                    },
-                    360: {
-                        slidesPerView: 1,
-                    },
-                },
-            });
-        });
-    </script>
-</section>
+<div class="w-full h-0.5 bg-gradient-to-r from-black via-primary-purple to-black mt-4 mx-auto"></div>
 
 <!-- Garis pemisah yang lebih tipis dan tidak full -->
 <div class="w-11/12 h-px bg-gray-500 mt-20 mx-auto"></div>
@@ -500,3 +411,61 @@ Contact Us <i class="fi fi-rr-arrow-up-right text-white text-sm ml-2"></i>
 <?php
 include 'layouts/footer.php'; // Menyertakan header.php
 ?>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const autoplayswiper = new Swiper('.autoplay-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            slidesPerView: 2,
+            spaceBetween: 2,
+            centeredSlides: false,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 7,
+                    spaceBetween: 2
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 4
+                },
+                360: {
+                    slidesPerView: 4,
+                    spaceBetween: 4
+                },
+            },
+        });
+
+        // swiper-cards untuk bagian Our Services
+        new Swiper('.swiper-cards', {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            spaceBetween: 24,
+            centeredSlides: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                480: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    autoplay: {
+                        enabled: false,
+                    },
+                },
+            },
+        });
+    });
+</script>

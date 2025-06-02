@@ -7,5 +7,14 @@
 	--color-secondary: #f1f3f4;
 	--color-tertiary: #47494e;
 	--color-primary-bg: #bc49f9;
+	--color-primary-purple: #bc49f9;
+	--color-primary-purple-hover: oklch(71.4% 0.203 305.504);
+	--color-card-services: #26262d;
 	--font-open-sans: 'Open Sans', sans-serif;
+}
+
+@layer components {
+	.btn-primary-purle {
+		@apply bg-primary-purple text-secondary hover:bg-primary-purple-hover duration-500 ease-in-out;
+	}
 }
